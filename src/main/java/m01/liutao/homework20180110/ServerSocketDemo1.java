@@ -33,9 +33,9 @@ public class ServerSocketDemo1 {
         Socket soc = null;// socket打开
         InputStream is = null;// 输入流打开
         FileOutputStream fos = null;// 文件输出流打开
-
+        ServerSocket ss=null;
         try {
-            ServerSocket ss = new ServerSocket(port);// 实例服务端接口
+            ss = new ServerSocket(port);// 实例服务端接口
             soc = ss.accept();// 接口接收文件定义为socket型
             is = soc.getInputStream();// 输入流中获取文件
             fos = new FileOutputStream(fil);// 实例文件输出
@@ -77,10 +77,20 @@ public class ServerSocketDemo1 {
 
                     // Auto-generated catch block
                     e.printStackTrace();
+                    
 
                 }
             }
+            if (ss != null) {// 关闭socket
+                try {
+                    ss.close();
+                } catch (IOException e) {
+
+                    // Auto-generated catch block
+                    e.printStackTrace();
         }
     }
 
+}
+    }
 }
