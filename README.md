@@ -7,7 +7,7 @@ DT59BlueManTeam
 - 张星宇 zhangxinyu
 - 杨奎 yangkui
 - 吕威 lvwei
-- 郑河洋 zhenheyang
+- 郑河洋 zhengheyang
 
 # 组介绍
 What do you want to be, and what will you be.
