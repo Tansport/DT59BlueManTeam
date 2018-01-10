@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.zhenheyang;
+package m01.zhengheyang;
 
 import org.apache.log4j.Logger;
 
