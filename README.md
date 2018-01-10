@@ -4,7 +4,7 @@ DT59BlueManTeam
 # 组成员
 - 刘涛 liutao
 - 刘文 liuwen
-- 张星宇 zhangxinyu
+- 张星宇 zhangxingyu
 - 杨奎 yangkui
 - 吕威 lvwei
 - 郑河洋 zhengheyang
