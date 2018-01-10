@@ -12,6 +12,6 @@ DT59BlueManTeam
 # 组介绍
 What do you want to be, and what will you be.
 
-#目录结构
+# 目录结构
 
 $组仓库名$/src/main/java/m01/liuwen
