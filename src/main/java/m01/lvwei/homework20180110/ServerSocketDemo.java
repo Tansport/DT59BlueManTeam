@@ -40,25 +40,39 @@ public class ServerSocketDemo {
         ServerSocket serversocket = null;
         Socket socket = null;
         // ByteArrayOutputStream lvs = new ByteArrayOutputStream();
-        FileWriter filewrtier;
+        FileWriter filewrtier = null;
+        InputStream is = null;
         // 文本
         try {
             serversocket = new ServerSocket(dun);
             // 接受端口
             socket = serversocket.accept();
-            InputStream is = socket.getInputStream();
+            is = socket.getInputStream();
             // 接受输出的HelloWorld
             filewrtier = new FileWriter("E:\\Java\\workspace\\workspace1\\src\\Text\\copy.txt");
             int b = -1;
             while ((b = is.read()) != -1) {
                 filewrtier.write(b & 0xFF);
             }
-            filewrtier.close();
+
             // byte[] byt = lvs.toByteArray();
             // String st = new String(byt);
 
         } catch (IOException e) {
 
+        } finally {
+            if (filewrtier != null) {
+                try {
+                    filewrtier.close();
+                    is.close();
+                } catch (IOException e) {
+
+                    // Auto-generated catch block
+                    e.printStackTrace();
+
+                }
+
+            }
         }
 
     }

@@ -33,7 +33,7 @@ public class IPDemo {
         // 本机名
         Socket socket = null;
         OutputStream ou = null;
-        FileReader fr;
+        FileReader fr = null;
         ByteArrayOutputStream sb = new ByteArrayOutputStream();
         try {
             InetAddress i = InetAddress.getByName(host);
@@ -60,6 +60,7 @@ public class IPDemo {
             if (ou != null) {
                 try {
                     ou.close();
+                    fr.close();
                 } catch (IOException e) {
 
                     e.printStackTrace();
