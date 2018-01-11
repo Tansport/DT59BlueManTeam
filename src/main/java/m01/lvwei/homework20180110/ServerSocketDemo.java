@@ -53,7 +53,7 @@ public class ServerSocketDemo {
             // FileWriter("F:\\VIDEO\\明道\\明道MV\\黑马程序员_毕向东_Java基础视频教程第01天-01-基本常识.avi");/*
             // 接收视频 */
             filewrtier = new FileOutputStream("E:\\Java\\workspace\\workspace1\\src\\lession180107\\deom2.txt");
-            // 接收文档字节流
+            // 返回输出写入后的流
             // filewrtier = new FileOutputStream("F:\\PICTURE\\辩论赛1.jpg");/*
             // 传图片*/
             byte by[] = new byte[1024];
