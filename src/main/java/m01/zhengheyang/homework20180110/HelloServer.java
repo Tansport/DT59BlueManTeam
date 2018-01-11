@@ -12,8 +12,7 @@ import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 
 /**
  * Description: <br/>
@@ -24,7 +23,7 @@ import org.slf4j.LoggerFactory;
  * @see
  */
 public class HelloServer {
-    private final static Logger LOG = LoggerFactory.getLogger(HelloServer.class);
+    private final static Logger LOG = Logger.getLogger(HelloServer.class);
 
     public static void main(String[] args) throws Exception {
         ServerSocket server = new ServerSocket(9999);

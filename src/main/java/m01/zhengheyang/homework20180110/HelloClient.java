@@ -13,8 +13,7 @@ import java.io.InputStream;
 import java.net.Socket;
 import java.util.Scanner;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 
 /**
  * Description: <br/>
@@ -25,7 +24,7 @@ import org.slf4j.LoggerFactory;
  * @see
  */
 public class HelloClient {
-    private final static Logger LOG = LoggerFactory.getLogger(HelloClient.class);
+    private final static Logger LOG = Logger.getLogger(HelloClient.class);
 
     public static void main(String[] args) throws Exception {
         InputStream fileObject = new FileInputStream("D:\\Git_coid\\README.md");
