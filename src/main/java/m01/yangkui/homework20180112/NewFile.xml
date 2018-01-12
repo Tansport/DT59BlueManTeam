@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<school>
+	<studen classes="dt:59班">
+		<studen name="张三" />
+		<studen age="24" />
+		<studen sex="男" />
+	</studen>
+		<studen name="琉夏">
+			<studen age="22" />
+			<studen sex="男"/>
+		</studen>
+		<studen name="嫣然">
+			<studen age="21" />
+			<studen sex="女"/>
+		</studen>
+</school>
