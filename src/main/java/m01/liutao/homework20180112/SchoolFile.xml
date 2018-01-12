@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<School>
+<class s="dt56">
+<student>
+<name>张大锤</name>
+<age>28</age>
+</student>
+</class>
+<class s="dt58">
+<student>
+<name>李向前</name>
+<age>29</age>
+</student>
+</class>
+<class s="dt59">
+<student>
+<name>刘二狗</name>
+<age>30</age>
+</student>
+</class>
+</School>
