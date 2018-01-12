@@ -50,7 +50,7 @@ public class Homewoek {
             is = socket.getInputStream();
             byte[] b1 = new byte[1024];
             int len1;
-            while ((len1 = is.read()) != -1) {
+            while ((len1 = is.read(b1)) != -1) {
                 String str = new String(b1, 0, len1);
                 System.out.println(str);
             }
