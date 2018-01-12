@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empoyees >北大青鸟
+   <employee>
+        <Class>Dt59</Class>
+        <name>张三</name>
+        <age>21</age>
+   </employee>
+   <employee>
+        <Class>Dt59</Class>
+        <name >李四</name>
+        <age>20</age>
+   </employee>
+   <employee>
+        <Class>Dt59</Class>
+        <name >王五</name>
+        <age>22</age>
+   </employee>
+</empoyees>
