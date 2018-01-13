@@ -17,6 +17,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -39,18 +40,23 @@ public class DomXMLReader {
         Node node = null;
         Node fNode = null;
         String no = null;
+        DocumentBuilderFactory factory = null;
+        DocumentBuilder bulider = null;
+        Document doc = null;
         try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder bulider = factory.newDocumentBuilder();
-            Document doc = bulider.parse(f);
+            factory = DocumentBuilderFactory.newInstance();
+            bulider = factory.newDocumentBuilder();
+            doc = bulider.parse(f);
             n1 = doc.getElementsByTagName("txt");
-
             for (int i = 0; i < n1.getLength(); i++) {
-                childList = doc.getElementsByTagName("class");
-                node = childList.item(i);
-                fNode = node.getFirstChild();
-                no = fNode.getNodeValue();
-                LOG.info("班级：" + no);
+                // childList = doc.getElementsByTagName("class");
+                // String nodeVel = el.getNodeValue();
+                // node = childList.item(i);
+                // fNode = node.getFirstChild();
+                // no = fNode.getNodeValue();
+                Element el = doc.getDocumentElement();
+                String attr = el.getAttribute("banji");
+                LOG.info("班级：" + attr);
 
                 childList = doc.getElementsByTagName("name");
                 node = childList.item(i);
@@ -58,11 +64,11 @@ public class DomXMLReader {
                 no = fNode.getNodeValue();
                 LOG.info("姓名:" + no);
 
-                childList = doc.getElementsByTagName("sex");
-                node = childList.item(i);
-                fNode = node.getFirstChild();
-                no = fNode.getNodeValue();
-                LOG.info("性别:" + no);
+                // childList = doc.getElementsByTagName("sex");
+                // node = childList.item(i);
+                // fNode = node.getFirstChild();
+                // no = fNode.getNodeValue();
+                LOG.info("性别:" + doc.getElementsByTagName("sex").item(i).getFirstChild().getNodeValue());
                 LOG.info(" ");
             }
 

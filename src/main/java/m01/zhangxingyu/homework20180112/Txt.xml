@@ -21,4 +21,21 @@
 		<name>小红</name>
 		<sex>女</sex>
 	</txt>
+	<txt>
+		<class>DT60班</class>
+		<name>赵六</name>
+		<sex>男</sex>
+	</txt>
+	<txt>
+		<class>DT60班</class>
+		<name>陈七</name>
+		<sex>男</sex>
+	</txt>
+	<txt>
+		<class>DT60班</class>
+		<name>小明</name>
+		<sex>男</sex>
+	</txt>
 </txts>
+
+
