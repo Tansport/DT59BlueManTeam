@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package DomXML;
+package m01.zhengheyang.homework20180112;
 
 import java.io.File;
 import java.io.FileInputStream;
