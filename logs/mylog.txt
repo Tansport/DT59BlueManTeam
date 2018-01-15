@@ -1,0 +1,147 @@
+2018-01-12 20:04:37 [ main:0 ] - [ INFO ] 标签信息name
+2018-01-12 20:04:37 [ main:2 ] - [ INFO ] 张大锤
+2018-01-12 20:04:37 [ main:2 ] - [ INFO ] 标签信息name
+2018-01-12 20:04:37 [ main:3 ] - [ INFO ] 李向前
+2018-01-12 20:04:37 [ main:4 ] - [ INFO ] 标签信息name
+2018-01-12 20:04:37 [ main:4 ] - [ INFO ] 刘二狗
+2018-01-12 20:05:46 [ main:0 ] - [ INFO ] 标签信息:name
+2018-01-12 20:05:46 [ main:1 ] - [ INFO ] 张大锤
+2018-01-12 20:05:46 [ main:1 ] - [ INFO ] 28
+2018-01-12 20:05:46 [ main:2 ] - [ INFO ] 标签信息:name
+2018-01-12 20:05:46 [ main:2 ] - [ INFO ] 李向前
+2018-01-12 20:05:46 [ main:2 ] - [ INFO ] 29
+2018-01-12 20:05:46 [ main:3 ] - [ INFO ] 标签信息:name
+2018-01-12 20:05:46 [ main:3 ] - [ INFO ] 刘二狗
+2018-01-12 20:05:46 [ main:4 ] - [ INFO ] 30
+2018-01-12 20:27:59 [ main:0 ] - [ INFO ] 标签信息:name
+2018-01-12 20:27:59 [ main:46 ] - [ INFO ] [#text: 张大锤]
+2018-01-12 20:27:59 [ main:47 ] - [ INFO ] 张大锤
+2018-01-12 20:27:59 [ main:47 ] - [ INFO ] 28
+2018-01-12 20:27:59 [ main:47 ] - [ INFO ] 标签信息:name
+2018-01-12 20:27:59 [ main:47 ] - [ INFO ] [#text: 李向前]
+2018-01-12 20:27:59 [ main:47 ] - [ INFO ] 李向前
+2018-01-12 20:27:59 [ main:48 ] - [ INFO ] 29
+2018-01-12 20:27:59 [ main:48 ] - [ INFO ] 标签信息:name
+2018-01-12 20:27:59 [ main:48 ] - [ INFO ] [#text: 刘二狗]
+2018-01-12 20:27:59 [ main:48 ] - [ INFO ] 刘二狗
+2018-01-12 20:27:59 [ main:48 ] - [ INFO ] 30
+2018-01-12 20:28:50 [ main:0 ] - [ INFO ] 标签信息:name
+2018-01-12 20:28:50 [ main:1 ] - [ INFO ] [name: null]
+2018-01-12 20:28:50 [ main:1 ] - [ INFO ] [#text: 张大锤]
+2018-01-12 20:28:50 [ main:1 ] - [ INFO ] 张大锤
+2018-01-12 20:28:50 [ main:2 ] - [ INFO ] 28
+2018-01-12 20:28:50 [ main:2 ] - [ INFO ] 标签信息:name
+2018-01-12 20:28:50 [ main:2 ] - [ INFO ] [name: null]
+2018-01-12 20:28:50 [ main:3 ] - [ INFO ] [#text: 李向前]
+2018-01-12 20:28:50 [ main:3 ] - [ INFO ] 李向前
+2018-01-12 20:28:50 [ main:3 ] - [ INFO ] 29
+2018-01-12 20:28:50 [ main:4 ] - [ INFO ] 标签信息:name
+2018-01-12 20:28:50 [ main:4 ] - [ INFO ] [name: null]
+2018-01-12 20:28:50 [ main:5 ] - [ INFO ] [#text: 刘二狗]
+2018-01-12 20:28:50 [ main:5 ] - [ INFO ] 刘二狗
+2018-01-12 20:28:50 [ main:5 ] - [ INFO ] 30
+2018-01-12 20:29:10 [ main:0 ] - [ INFO ] 标签信息:name
+2018-01-12 20:29:10 [ main:1 ] - [ INFO ] [class: null]
+2018-01-12 20:29:10 [ main:1 ] - [ INFO ] [#text: 张大锤]
+2018-01-12 20:29:10 [ main:2 ] - [ INFO ] 张大锤
+2018-01-12 20:29:10 [ main:3 ] - [ INFO ] 28
+2018-01-12 20:29:10 [ main:3 ] - [ INFO ] 标签信息:name
+2018-01-12 20:29:10 [ main:3 ] - [ INFO ] [class: null]
+2018-01-12 20:29:10 [ main:4 ] - [ INFO ] [#text: 李向前]
+2018-01-12 20:29:10 [ main:4 ] - [ INFO ] 李向前
+2018-01-12 20:29:10 [ main:4 ] - [ INFO ] 29
+2018-01-12 20:29:10 [ main:5 ] - [ INFO ] 标签信息:name
+2018-01-12 20:29:10 [ main:5 ] - [ INFO ] [class: null]
+2018-01-12 20:29:10 [ main:5 ] - [ INFO ] [#text: 刘二狗]
+2018-01-12 20:29:10 [ main:6 ] - [ INFO ] 刘二狗
+2018-01-12 20:29:10 [ main:7 ] - [ INFO ] 30
+2018-01-12 20:30:20 [ main:0 ] - [ INFO ] 标签信息:name
+2018-01-12 20:30:20 [ main:1 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@688c7c7f
+2018-01-12 20:30:20 [ main:2 ] - [ INFO ] [class: null]
+2018-01-12 20:30:20 [ main:2 ] - [ INFO ] [#text: 张大锤]
+2018-01-12 20:30:20 [ main:3 ] - [ INFO ] 张大锤
+2018-01-12 20:30:20 [ main:3 ] - [ INFO ] 28
+2018-01-12 20:30:20 [ main:3 ] - [ INFO ] 标签信息:name
+2018-01-12 20:30:20 [ main:3 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@2ac28d29
+2018-01-12 20:30:20 [ main:3 ] - [ INFO ] [class: null]
+2018-01-12 20:30:20 [ main:3 ] - [ INFO ] [#text: 李向前]
+2018-01-12 20:30:20 [ main:4 ] - [ INFO ] 李向前
+2018-01-12 20:30:20 [ main:4 ] - [ INFO ] 29
+2018-01-12 20:30:20 [ main:4 ] - [ INFO ] 标签信息:name
+2018-01-12 20:30:20 [ main:4 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@4ac194ad
+2018-01-12 20:30:20 [ main:5 ] - [ INFO ] [class: null]
+2018-01-12 20:30:20 [ main:5 ] - [ INFO ] [#text: 刘二狗]
+2018-01-12 20:30:20 [ main:5 ] - [ INFO ] 刘二狗
+2018-01-12 20:30:20 [ main:5 ] - [ INFO ] 30
+2018-01-12 20:30:55 [ main:0 ] - [ INFO ] 标签信息:name
+2018-01-12 20:30:55 [ main:1 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@688c7c7f
+2018-01-12 20:30:55 [ main:2 ] - [ INFO ] [name: null]
+2018-01-12 20:30:55 [ main:2 ] - [ INFO ] [#text: 张大锤]
+2018-01-12 20:30:55 [ main:3 ] - [ INFO ] 张大锤
+2018-01-12 20:30:55 [ main:3 ] - [ INFO ] 28
+2018-01-12 20:30:55 [ main:3 ] - [ INFO ] 标签信息:name
+2018-01-12 20:30:55 [ main:3 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@2ac28d29
+2018-01-12 20:30:55 [ main:4 ] - [ INFO ] [name: null]
+2018-01-12 20:30:55 [ main:4 ] - [ INFO ] [#text: 李向前]
+2018-01-12 20:30:55 [ main:4 ] - [ INFO ] 李向前
+2018-01-12 20:30:55 [ main:4 ] - [ INFO ] 29
+2018-01-12 20:30:55 [ main:5 ] - [ INFO ] 标签信息:name
+2018-01-12 20:30:55 [ main:5 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@4ac194ad
+2018-01-12 20:30:55 [ main:6 ] - [ INFO ] [name: null]
+2018-01-12 20:30:55 [ main:6 ] - [ INFO ] [#text: 刘二狗]
+2018-01-12 20:30:55 [ main:6 ] - [ INFO ] 刘二狗
+2018-01-12 20:30:55 [ main:6 ] - [ INFO ] 30
+2018-01-12 20:32:02 [ main:0 ] - [ INFO ] 标签信息:name
+2018-01-12 20:32:02 [ main:1 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@5f41ab78
+2018-01-12 20:32:02 [ main:2 ] - [ INFO ] [name: null]
+2018-01-12 20:32:02 [ main:2 ] - [ INFO ] [#text: 张大锤]
+2018-01-12 20:32:02 [ main:2 ] - [ INFO ] 张大锤
+2018-01-12 20:32:02 [ main:2 ] - [ INFO ] 28
+2018-01-12 20:32:02 [ main:3 ] - [ INFO ] 标签信息:name
+2018-01-12 20:32:02 [ main:3 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@4ac194ad
+2018-01-12 20:32:02 [ main:3 ] - [ INFO ] [name: null]
+2018-01-12 20:32:02 [ main:3 ] - [ INFO ] [#text: 李向前]
+2018-01-12 20:32:02 [ main:4 ] - [ INFO ] 李向前
+2018-01-12 20:32:02 [ main:4 ] - [ INFO ] 29
+2018-01-12 20:32:02 [ main:4 ] - [ INFO ] 标签信息:name
+2018-01-12 20:32:02 [ main:4 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@6b081032
+2018-01-12 20:32:02 [ main:5 ] - [ INFO ] [name: null]
+2018-01-12 20:32:02 [ main:5 ] - [ INFO ] [#text: 刘二狗]
+2018-01-12 20:32:02 [ main:6 ] - [ INFO ] 刘二狗
+2018-01-12 20:32:02 [ main:7 ] - [ INFO ] 30
+2018-01-12 22:03:07 [ main:0 ] - [ INFO ] 标签信息:name
+2018-01-12 22:03:07 [ main:0 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@50608423
+2018-01-12 22:03:07 [ main:0 ] - [ INFO ] [name: null]
+2018-01-12 22:03:07 [ main:0 ] - [ INFO ] [#text: 张大锤]
+2018-01-12 22:03:07 [ main:0 ] - [ INFO ] 张大锤
+2018-01-12 22:03:07 [ main:0 ] - [ INFO ] 28
+2018-01-12 22:03:07 [ main:0 ] - [ INFO ] 标签信息:name
+2018-01-12 22:03:07 [ main:0 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@6b081032
+2018-01-12 22:03:07 [ main:0 ] - [ INFO ] [name: null]
+2018-01-12 22:03:07 [ main:0 ] - [ INFO ] [#text: 李向前]
+2018-01-12 22:03:07 [ main:0 ] - [ INFO ] 李向前
+2018-01-12 22:03:07 [ main:0 ] - [ INFO ] 29
+2018-01-12 22:03:07 [ main:16 ] - [ INFO ] 标签信息:name
+2018-01-12 22:03:07 [ main:16 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@5e5f7983
+2018-01-12 22:03:07 [ main:16 ] - [ INFO ] [name: null]
+2018-01-12 22:03:07 [ main:16 ] - [ INFO ] [#text: 刘二狗]
+2018-01-12 22:03:07 [ main:16 ] - [ INFO ] 刘二狗
+2018-01-12 22:03:07 [ main:16 ] - [ INFO ] 30
+2018-01-12 22:04:59 [ main:0 ] - [ INFO ] 标签信息:name
+2018-01-12 22:04:59 [ main:47 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@50608423
+2018-01-12 22:04:59 [ main:47 ] - [ INFO ] [name: null]
+2018-01-12 22:04:59 [ main:47 ] - [ INFO ] [#text: 张大锤]
+2018-01-12 22:04:59 [ main:47 ] - [ INFO ] 张大锤
+2018-01-12 22:04:59 [ main:47 ] - [ INFO ] 28
+2018-01-12 22:04:59 [ main:47 ] - [ INFO ] 标签信息:name
+2018-01-12 22:04:59 [ main:47 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@6b081032
+2018-01-12 22:04:59 [ main:47 ] - [ INFO ] [name: null]
+2018-01-12 22:04:59 [ main:47 ] - [ INFO ] [#text: 李向前]
+2018-01-12 22:04:59 [ main:47 ] - [ INFO ] 李向前
+2018-01-12 22:04:59 [ main:47 ] - [ INFO ] 29
+2018-01-12 22:04:59 [ main:47 ] - [ INFO ] 标签信息:name
+2018-01-12 22:04:59 [ main:62 ] - [ INFO ] com.sun.org.apache.xerces.internal.dom.DeepNodeListImpl@5e5f7983
+2018-01-12 22:04:59 [ main:62 ] - [ INFO ] [name: null]
+2018-01-12 22:04:59 [ main:62 ] - [ INFO ] [#text: 刘二狗]
+2018-01-12 22:04:59 [ main:62 ] - [ INFO ] 刘二狗
+2018-01-12 22:04:59 [ main:62 ] - [ INFO ] 30
