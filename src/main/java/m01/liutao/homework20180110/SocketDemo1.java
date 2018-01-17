@@ -28,7 +28,7 @@ import org.junit.Test;
 public class SocketDemo1 {// 不太会做，不知道到底用什么构造方法，对文件传送的过程不太懂
     @Test
     public void Demo1() {
-        File fil = new File("C:\\Users\\Public\\Pictures\\t.jpg");// 实例发送文件的路径对象
+        File fil = new File("F:\\java视频教程\\黑马教程\\03_第3阶段-企业常用主流框架教程+实战项目（共49天）\\1.rar");// 实例发送文件的路径对象
         int port = 9999;// 接口号
         String Add = "DESKTOP-TAO";// PC电脑默认名
 
