@@ -1,0 +1,100 @@
+<!DOCTYPE html5>
+
+<head>
+	<meta charset="UTF-8">
+	<title> 个人信息</title>
+</head>
+
+<body>
+	<h1>个人信息</h1>
+	<form method="get" action="subil.html">
+		<p>
+			姓名:
+			<input name="name" type="text" size="21" placeholder="请输入姓名" required/>
+		</p>
+		<p>
+			性别：
+			<label for="male">男</label>
+			<input type="radio" name="gender" id="male" />
+			<label for="famale">女</label>
+			<input type="radio" name="gender" id="famale" />
+			<label for="no">保密</label>
+			<input type="radio" name="gender" id="no" />
+		</p>
+		<p>
+			生日:
+			<select name="bmon" required>
+				<option value="">[选择月份]</option>
+				<option value="1">一月</option>
+				<option value="2">二月</option>
+				<option value="3">三月</option>
+				<option value="4">四月</option>
+				<option value="5">五月</option>
+				<option value="6">六月</option>
+				<option value="7">七月</option>
+				<option value="8">八月</option>
+				<option value="9">九月</option>
+				<option value="10">十月</option>
+				<option value="11">十一月</option>
+				<option value="12">十二月</option>
+			</select>月
+			<select name="ri" required>
+				<option value="">[选择日期]</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+			</select>日
+		</p>
+		<p>
+			电话号码:
+			<input type="text" name="tel" required pattern="^1[358]\d{9}" /> *以13、15、18开头的11位数字
+		</p>
+		<p>
+			邮箱:
+			<input type="text" name="email" required/>
+			<select>
+				<option value="@qq.com">@qq.com</option>
+				<option value="@163.com">@163.com</option>
+			</select>
+		</p>
+		<h4>填写个人评价</h4>
+		<p>
+			<textarea name="textarea" cols="40" rows="6">
+			</textarea>
+		</p>
+		<p>
+			<input name="" type="checkbox" value="" required/>同意用户协议
+		</p>
+		<input name="baocun" type="submit" value="提交" />
+	</form>
+</body>
+
+</html>
