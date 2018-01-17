@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人简历</title>
+	</head>
+	<body>
+		<center><h2>个人简历</h2></center><br />
+		<!--
+        	作者：刘涛
+        	时间：2018-01-17
+        	描述：enctype="multipart/form-date" enctype="multipart/form-date" 
+        	enctype="multipart/form-date" enctype="multipart/form-date" 
+        	enctype="multipart/form-date" enctype="multipart/form-date"
+        	enctype="multipart/dorm-date" enctype="multipart/form-date"
+        -->
+		<form method="get" action="" enctype="multipart/form-date">
+			<table>
+				<h4>基本信息</h4>
+			<tr><td>姓名：<input type="text" name="name" placeholder="请输入姓名" pattern="[-\w\u4e00-\uqFAS]{4,10}" required></input></td></tr>
+			<tr><td>
+				教育程度：
+				<input type="radio" name="name" value="专科" id="name1"><label for="name1">专科</label></input>
+				<input type="radio" name="name" value="本科" id="name2"><label for="name2">本科</label></input>
+				<input type="radio" name="name" value="硕士" id="name3"><label for="name3">硕士</label></input>
+				<input type="radio" name="name" value="博士" id="name4"><label for="name4">博士</label></input>
+				<input type="radio" name="name" value="其他" id="name5"><label for="name5">其他</label></input>
+			</td></tr>
+			<tr>
+				<td>
+					常用邮箱：
+					<input type="email" name="name" placeholder="请输入邮箱" required></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					手机号码：
+					<input type="text" name="tel" placeholder="请输入手机号码" pattern="1[3578]{9}" required></input>
+					<font color="coral"/>*以13、15、17、18开头的11位数字
+				</td>
+			</tr>
+			<tr>
+				<td>
+					性别：
+					<input type="radio" name="name" value="男" id="male"><label for="male">男</label></input>
+					<input type="radio" name="name" value="女" id="female"><label for="female">女</label></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					年龄：
+					<input type="number" name="age" min="0" max="150" step="1" placeholder="输入年龄" required></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					籍贯:
+					<select name>
+						<option value="1" selected>湖北</option>
+						<option value="2">湖南</option>
+						<option value="3">广东</option>
+						<option value="4">四川</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					期望月薪：
+					<select name="">
+						<option value="">选择月薪</option>
+						<option value="2">1000</option>
+						<option value="3">3000</option>
+						<option value="4">6000</option>
+						<option value="5">9000</option>
+						<option value="6">12000</option>
+						<option value="7">20000</option>
+					</select>
+					至
+					<select name="">
+						<option value="1" selected>2000</option>
+						<option value="2">5000</option>
+						<option value="3">8000</option>
+						<option value="4">11000</option>
+						<option value="5">14000</option>
+						<option value="6">以上</option>
+					</select>
+					元
+				</td>
+			</tr>
+			<tr>
+				<td>
+					个人爱好：
+					<input type="checkbox" name="like1" value="read" id="1"><label for="1">阅读</label></input>
+					<input type="checkbox" name="like2" value="song" id="2"><label for="2">唱歌</label></input>
+					<input type="checkbox" name="like3" value="sports" id="3"><label for="3">运动</label></input>
+					<input type="checkbox" name="like4" value="vistor" id="4"><label for="4">旅游</label></input>
+					<input type="checkbox" name="like5" value="talk" id="5"><label for="5">聊天</label></input>
+					<input type="checkbox" name="like6" value="play" id="6"><label for="6">游戏</label></input>
+					<input type="checkbox" name="like7" value="write" id="7"><label for="7">写作</label></input>
+					<input type="checkbox" name="like8" value="other" id="8"><label for="8">其他</label></input>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<p/>
+					<strong>教育经历：</strong><br>
+					<p/>
+					<input type="date" name=date></input>
+					至<input type="date" name=date></input><br/>
+					<p/>
+					<textarea name="textarea" cols="50" rows="10"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<strong>工作经历：</strong><br>
+					<p/>
+					<input type="date" name=date></input>
+					至<input type="date" name=date></input><br/>
+					<p/>
+					<textarea name="textarea" cols="50" rows="10"></textarea>
+				
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<strong>自我评价：</strong><br>
+					<p/>
+					<textarea name="textarea" cols="50" rows="10"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					个人资料提交:<br>
+					2寸相片：<input type="file" name="files1"></input><br>
+					身份证复印件：<input type="file" name="files2"></input><br>
+					学历证书复印件：<input type="file" name="files3"></input><br>
+					职称证书复印件：<input type="file" name="files4"></input><br>
+					个人简历电子版：<input type="file" name="files5"></input><br>
+					<p><input type="hidden" value="666" name="userid"></input></p>
+				</td>
+			</tr>
+			<tr>
+				<td><center>
+					<input type="submit" name="submit" value="提交"></input>
+					<input type="reset" name="reset" value="重写"></input></center>
+				</td>
+			</tr>
+			
+			</table>
+		</form>
+		
+	</body>
+</html>
+
