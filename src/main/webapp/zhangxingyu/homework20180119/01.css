@@ -1,0 +1,22 @@
+h1 {
+	color: ghostwhite;
+	background: blue;
+}
+
+p {
+	text-indent: 2em;
+	line-height: 1.5;
+	font-size: 12px;
+	padding: 2em 0em;
+	border-right: dashed;
+	border-color: red;
+	border-right-style: double;
+	border-width: 3px;
+}
+
+.img {
+	border-color: #9999cc;
+	border-style: dashed;
+	border-width 1px;
+	float: left;
+}
