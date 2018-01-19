@@ -1,0 +1,12 @@
+table{
+	border: 3px red solid;
+	width: 300px;
+	height: 250px;
+	border-collapse:collapse ;
+}
+td{
+	border: 1px blue solid;
+}
+.name{
+	border-bottom:3px black solid ;
+}
