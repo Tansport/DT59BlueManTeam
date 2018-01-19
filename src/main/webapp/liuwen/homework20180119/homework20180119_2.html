@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<!--使用内部链接的方式来书写本题-->
+	<head>
+		<meta charset="UTF-8">
+		<title>表格</title>
+		<style>
+			table{
+				border: 3px solid red;
+			}
+			tr{
+				border: 1px solid blue;
+			}
+			th{
+				border-bottom: 3px solid black;
+			}
+			#border1{
+				border-top: none;
+			}
+			#border2{
+				border-bottom: none;
+			}
+			#border3{
+				border-left: none;
+			}
+			#border4{
+				border-right: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<table border="1px" height="300px" width="800px" cellspacing="0px">
+			<tr id="border1" id="border2">
+				<th id="border3"></th>
+				<th></th>
+				<th></th>
+				<th id="border4"></th>
+			</tr>
+			<tr>
+				<td id="border3"></td>
+				<td></td>
+				<td></td>
+				<td id="border4"></td>
+			</tr>
+			<tr>
+				<td id="border3"></td>
+				<td></td>
+				<td></td>
+				<td id="border4"></td>
+			</tr>
+			<tr id="border2">
+				<td id="border3"></td>
+				<td></td>
+				<td></td>
+				<td id="border4"></td>
+			</tr>
+		</table>
+	</body>
+</html>
