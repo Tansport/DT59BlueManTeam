@@ -20,4 +20,9 @@ body{
 }
 div{
 	background-image:url(1.png);
+	background-size:12px 28px; 
+}
+*{
+	margin: 0px;
+	padding: opx;
 }
