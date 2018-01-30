@@ -26,7 +26,9 @@ import org.apache.log4j.Logger;
 public class HelloClient {
     private final static Logger LOG = Logger.getLogger(HelloClient.class);
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) throws Exception {
+        @SuppressWarnings("unused")
         InputStream fileObject = new FileInputStream("D:\\Git_coid\\README.md");
         Socket client = new Socket("localhost", 9999);
         Scanner scan = new Scanner(client.getInputStream());

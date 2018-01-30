@@ -79,11 +79,8 @@
 		</p>
 		<p>
 			邮箱:
-			<input type="text" name="email" required/>
-			<select>
-				<option value="@qq.com">@qq.com</option>
-				<option value="@163.com">@163.com</option>
-			</select>
+			<input type="text" pattern="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})" required/>
+			
 		</p>
 		<h4>填写个人评价</h4>
 		<p>
