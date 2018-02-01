@@ -6,15 +6,16 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.yangkui.homework20180110;
+package m01.d10.yangkui;
+
 /**
- * Description:   <br/>
- * Date:     2018年1月10日 上午9:11:01 <br/>
- * @author   YangKui
+ * Description: <br/>
+ * Date: 2018年1月10日 上午9:11:01 <br/>
+ * 
+ * @author YangKui
  * @version
  * @see
  */
 public class Demo {
 
 }
-

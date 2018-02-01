@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.liuwen.homework20180124;
+package m01.d24.liuwen;
 
 import java.util.LinkedList;
 

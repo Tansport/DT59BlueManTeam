@@ -6,15 +6,16 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.liuwen.homework20180110;
+package m01.d10.liuwen;
+
 /**
- * Description:   <br/>
- * Date:     2018年1月10日 上午9:17:06 <br/>
- * @author   WEN LIU
+ * Description: <br/>
+ * Date: 2018年1月10日 上午9:17:06 <br/>
+ * 
+ * @author WEN LIU
  * @version
  * @see
  */
 public class TestDemo1 {
 
 }
-

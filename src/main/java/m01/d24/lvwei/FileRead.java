@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.lvwei.homework20180124;
+package m01.d24.lvwei;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.liuwen.homework20180110;
+package m01.d10.liuwen;
 
 import java.io.File;
 import java.io.FileInputStream;

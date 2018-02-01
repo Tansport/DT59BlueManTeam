@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.yangkui.homework20180112;
+package m01.d12.yangkui;
 
 import java.io.File;
 
@@ -19,8 +19,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
-import m01.yangkui.homework20180112.XmlReadr;
 
 /**
  * Description: <br/>

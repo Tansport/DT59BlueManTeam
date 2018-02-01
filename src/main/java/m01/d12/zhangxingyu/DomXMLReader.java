@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.zhangxingyu.homework20180112;
+package m01.d12.zhangxingyu;
 
 import java.io.File;
 import java.io.IOException;

@@ -6,19 +6,14 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.yangkui.homework20180110;
+package m01.d10.yangkui;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.Socket;
-import java.net.UnknownHostException;
-
-import javax.print.attribute.standard.Severity;
 
 /**
  * Description: <br/>

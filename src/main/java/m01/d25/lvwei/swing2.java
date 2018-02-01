@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.lvwei.homework20180125;
+package m01.d25.lvwei;
 
 import javax.swing.JFrame;
 

@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.zhangxingyu.homework20180125;
+package m01.d25.zhangxingyu;
 
 import java.util.LinkedList;
 import java.util.Scanner;

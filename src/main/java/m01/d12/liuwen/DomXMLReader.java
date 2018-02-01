@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.liuwen.homework20180112;
+package m01.d12.liuwen;
 
 import java.io.File;
 
@@ -34,8 +34,8 @@ public class DomXMLReader {
             // 从DOM工厂获得DOM解析器
             DocumentBuilder db = dbf.newDocumentBuilder();
             // 解析XML文档，得到一个Document对象，即DOM树
-            Document doc = db.parse(
-                    new File("E:\\git\\DT59BlueManTeam\\src\\main\\java\\m01\\liuwen\\homework20180112\\School.xml"));
+            Document doc = db.parse(new File(
+                    "E:\\git\\DT59BlueManTeam\\src\\main\\java\\m01\\liuwen\\homework20180112\\School.xml"));
             // 得到所有student节点列表信息
             NodeList nl = doc.getElementsByTagName("student");
             // 循环student信息

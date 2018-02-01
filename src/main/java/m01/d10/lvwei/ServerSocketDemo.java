@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.lvwei.homework20180110;
+package m01.d10.lvwei;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

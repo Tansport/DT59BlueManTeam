@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.zhangxingyu.homework20180110;
+package m01.d10.zhangxingyu;
 
 import java.io.File;
 import java.io.FileInputStream;
