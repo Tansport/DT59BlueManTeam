@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>彩妆</title>
+		<style>
+			div#mydiv{
+				width: 320px;
+				height: 320px;
+				background: white;
+				/*border: 1px dashed blue;*/
+				
+			}
+			div.title{
+				width: 320px;
+				height: 40px;
+				background-color: red ;
+				line-height: 40px;
+				/*font-family: "";*/
+				font-size: 24px;
+				color: white;
+			}
+			/*dl dt{
+				list-style-type: none;
+			}*/
+			#mydiv a>span{
+				/*dtst-style: url(img/dot_01.gif) outside decimal;*/
+				background: url(img/dot_01.gif) no-repeat; /*设置编号的背景颜色，以及不重复*/
+				/*list-style:none;*/
+				line-height: 30px;/*设置行高*/
+				background-position: center;/*设置背景居中*/
+				padding: 10px;/*设置边框，这个必须要设置，不然图片只会显示一点点*/
+				color: white;/*字体颜色设置为白色*/
+			}
+			#mydiv dt{
+				border-bottom: dashed;/*底部虚线*/
+			}
+			#mydiv dt div{
+				display: none;/*隐藏div*/
+				text-align: center;/*隐藏居中*/
+			}
+			
+			#mydiv a:hover div{
+				display: block;/*显示div*/
+				color: red;/*显示里面的红色*/
+			}
+			#mydiv a:hover{
+				color: red;/*鼠标悬浮，字体变红*/
+			}
+			#mydiv a:hover>span{/*鼠标悬浮*/
+				background: url(img/dot_02.gif);/*更改背景图标为红色*/
+				background-repeat: no-repeat;/*背景图片不重复*/
+				background-position: center;/*背景图片居中*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mydiv">
+			<div class="title">大家都喜欢的彩妆</div>
+			<dl>
+				<dt>
+					<a>
+						<span>1</span>Za姬芮新能真美白隔离霜 35g
+						<div>
+							<img src="img/icon-1.jpg" alt="Za姬芮新能真美白隔离霜 35g"/><br />
+							<span>￥62.00 最近70000人购买</span>
+						</div>
+					</a>
+				</dt>
+				
+				<dt>
+					<a>
+						<span>2</span>美宝莲精纯矿物奇妙新颜乳霜BB霜 30ml
+						<div>
+							<img src="img/icon-2.jpg" alt="美宝莲精纯矿物奇妙新颜乳霜BB霜 30ml"/><br />
+							<span>￥59.00 最近89999人购买</span>
+						</div>
+					</a>
+				</dt>
+				
+				<dt>
+					<a>
+						<span>3</span>菲奥娜水漾CC霜 40g
+						<div>
+							<img src="img/icon-3.jpg" alt="菲奥娜水漾CC霜 40g"/><br />
+							<span>￥109.00 最近37654人购买</span>
+						</div>
+					</a>
+				</dt>	
+				
+				<dt>
+					<a>
+						<span>4</span>DHC 蝶翠诗橄榄卸妆油  200ml
+						<div>
+							<img src="img/icon-4.jpg" alt="DHC 蝶翠诗橄榄卸妆油  200ml"/><br />
+							<span>￥59.90 最近12403人购买</span>
+						</div>
+					</a>
+				</dt>	
+			</dl>
+		</div>
+	</body>
+</html>
