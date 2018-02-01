@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<txts>
+	<txt>
+		<class>DT59班</class>
+		<name>张三</name>
+		<sex>男</sex>
+	</txt>
+	<txt>
+		<class>DT59班</class>
+		<name>李四</name>
+		<sex>男</sex>
+	</txt>
+	<txt>
+		<class>DT59班</class>
+		<name>王五</name>
+		<sex>男</sex>
+	</txt>
+	<txt>
+		<class>DT59班</class>
+		<name>小红</name>
+		<sex>女</sex>
+	</txt>
+	<txt>
+		<class>DT60班</class>
+		<name>赵六</name>
+		<sex>男</sex>
+	</txt>
+	<txt>
+		<class>DT60班</class>
+		<name>陈七</name>
+		<sex>男</sex>
+	</txt>
+	<txt>
+		<class>DT60班</class>
+		<name>小明</name>
+		<sex>男</sex>
+	</txt>
+</txts>
+
+
