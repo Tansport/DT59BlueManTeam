@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>免费体验登陆页面</title>
+		<script>
+			window.onload = function() {
+				var day = document.getElementById("day");
+				var day = day.options;
+				for(var i = 1; i < 100; i++) {
+					day[i] = new Option(i, i);
+				}
+			}
+		</script>
+		<style type="text/css">
+			body{
+				margin: 0px;
+			}
+			div#no1 {
+				width: 400px;
+				height: 500px;
+				background-image: url(bg.jpg);
+				background-repeat: no-repeat;
+				margin: auto;
+			}
+			
+			div#no2 {
+				padding: 90px 40px;
+				color: white;
+				font-size: 15px;
+				font-weight: bolder;
+			}
+			
+			div#no3 {
+				line-height: 35px;
+			}
+			
+			span {
+				color: red;
+			}
+			
+			div#no5 {
+				line-height: 35px;
+			}
+			
+			div#no6 {
+				padding: 10px 35px;
+			}
+			
+			input {
+				border-radius: 5px 5px 5px 5px;
+			}
+			
+			select {
+				border-radius: 5px 5px 5px 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="no1">
+			<div id="no2">
+				<form action="" method="get">
+					<div id="no3">
+						<span>*</span>姓名：<input type="text" value=""   placeholder="请输入姓名" required=""/><br />
+						<span>*</span>邮箱：<input type="email" value="" placeholder="请输入邮箱" /><br />
+						<span>*</span>电话：<input type="text" value="" placeholder="请输入您的电话号码" required=""/><br />
+					</div>
+					<div id="no5">
+						<div id="no4">
+							性别：
+							<select>
+								<option value="1">请选择</option>
+								<option value="男">男</option>
+								<option value="女">女</option>
+							</select>
+						</div>
+						<div id="no4">
+							年龄：
+							<select id="day">
+								<option>请选择</option>
+							</select>
+						</div>
+						<div id="no6">
+							<input type="image" src="btn.jpg" btn.jpgbtn.jpg />
+						</div>
+					</div>
+
+				</form>
+			</div>
+
+		</div>
+	</body>
+
+</html>
