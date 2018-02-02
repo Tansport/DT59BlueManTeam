@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				var day = document.getElementById("day");
+				var day = day.options;
+				for (var i = 1; i <= 120; i++) {
+					day[i] = new Option(i, i);
+				}
+			}
+		</script>
+		<style>
+			#mydiv {
+				background: url(bg.jpg);
+				width: 312px;
+				height: 353px;
+			}
+			
+			.cc {
+				height: 60px;
+			}
+			
+			#mydiv ul li {
+				line-height: 40px;
+				color: #F8F8FF;
+				font-weight: bold;
+				list-style:none;
+			}
+			
+			#mydiv ul li input {
+				border-radius: 5px 5px 5px 5px;
+			}
+			
+			p {
+				color: #F8F8FF;
+				font-weight: bold;
+				margin-left: -10px;
+			}
+			
+			p select {
+				border-radius: 5px 5px 5px 5px;
+			}
+			span{
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="mydiv" class="a">
+			<div class="cc">
+
+			</div>
+			<ul>
+				<li><span>*</span> 姓名:
+					<input name="name" type="text" size="21" placeholder="请输入姓名" required/></li>
+				<li><span>*</span> 邮箱:
+					<input name="name" type="text" size="21" placeholder="请输入邮箱" required/></li>
+				<li><span>*</span> 电话:
+					<input name="name" type="text" size="21" placeholder="请输入电话" required/></li>
+				<p>性别：
+					<select name="bmon" required>
+						<option value="">请选择</option>
+						<option value="1">男</option>
+						<option value="2">女</option>
+					</select></p>
+				<p>年龄：
+					<select id="day">
+    					<option>请选择</option>
+   					</select></p>
+			</ul>
+			<center><a href="#"><img src="btn.jpg"/></a></center>
+		</div>
+	</body>
+
+</html>
