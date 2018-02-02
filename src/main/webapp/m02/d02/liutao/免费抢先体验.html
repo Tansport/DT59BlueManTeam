@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>免费抢先体验</title>
+		<script>
+			window.onload=function(){
+				var age=document.getElementById("age");
+				var age=age.options;
+				for(var i=1;i<=200;i++){
+					age[i]=new Option(i,i);
+				}
+			}
+		</script>
+		<style>
+			
+		
+			#c1{
+				width: 314px;
+				height: 355px;
+				background: url(bg.jpg) no-repeat;
+				border:1px black solid;
+				box-sizing:border-box;
+				padding: 0px;
+				
+			}
+			div ul.c2 {
+				width:270px;
+				height:100px;
+				padding-top: 60px;
+				padding-bottom: 10px;
+				list-style: none;
+			}
+			li input{
+				border-radius: 5px 5px 5px 5px ;\n
+				
+			}
+			select {
+				border-radius: 5px 5px 5px 5px ;
+			}
+			 li span{
+			 	color: red;
+			 	padding-right: 6px;
+			 }
+			ul li{
+				line-height: 40px;
+				padding-right: 58px;
+				color: white;
+			}
+			div div:nth-child(2){
+				color: white;
+				text-indent: 50px;
+				line-height: 35px;
+			}
+			div div:nth-child(3){
+				color: white;
+				text-indent: 50px;
+				line-height: 35px;
+			}
+			div div:nth-child(4){
+				color: white;
+				width:310px;
+				height:70px;
+				background: url(btn.jpg)center no-repeat;
+					
+			}
+			
+			
+		</style>
+		
+	</head>
+	<body>
+		<div id="c1">
+			<div>
+			<ul class="c2">
+				<li><span>*</span>姓名:<input type="text" value="" size="21" placeholder="请输入姓名" required=""/></li>
+				<li><span>*</span>邮箱:<input type="text" value="" size="21" placeholder="请输入邮箱"/></li>
+				<li><span>*</span>邮箱:<input type="text" value="" size="21" placeholder="请输入电话" required=""/></li>	
+			</ul>
+			</div>
+			<div>性别:<select id="male"><option value="">请选择</option><option  value="man">男</option><option  value="woman">女</option></select></div>
+		    <div>年龄:<select id="age"><option >请选择</option></select></div>
+		    <div></div>
+		</div>
+		
+	</body>
+</html>
