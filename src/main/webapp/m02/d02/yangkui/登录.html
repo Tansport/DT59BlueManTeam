@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				var year = document.getElementById("year");
+				var year = year.options;
+				for (var i = 1; i <= 120; i++) {
+					year[i] = new Option(i, i);
+				}
+			}
+		</script>
+		<style>
+			#mydiv{
+				width: 312px;
+				height: 353px;
+				background: url(img/bg.jpg) no-repeat;
+			}
+			.name{
+				height: 90px;
+			}
+			#mydiv ul{
+				list-style-type: none;
+			}
+			#mydiv ul li input{
+				border-radius: 3px 3px 3px 3px;
+			}
+			#mydiv ul li span{
+				color: red;
+			}
+			#mydiv ul li{
+				color: white;
+				text-align: center;
+				padding: 6px;
+				
+			}
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			p{
+				color: white;
+				padding: 6px;
+				margin-left:42px ;
+			}
+			p select{
+				border-radius: 3px 3px 3px 3px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mydiv">
+			<ul>
+				<div class="name"></div>
+				<li>
+						<span>*</span>
+						姓名：<input type="text" placeholder="请输入姓名"/>
+				</li>
+				<li>
+						<span>*</span>
+						邮箱：<input type="email" placeholder="请输入邮箱" />
+				</li>
+				<li>
+						<span>*</span>
+						电话：<input type="text" pattern="1[3578]\d{9}" placeholder="输入以1 3\5\7\8开头的号码"/>
+				</li>
+				<p>性别：
+					<select name="sex" required>
+						<option value="">请选择---</option>
+						<option value="1">男</option>
+						<option value="2">女</option>
+					</select>
+				</p>
+				<p>年龄：
+					<select id="year">
+					<option>请选择---</option>
+					</select>
+				</p>
+			</ul>
+			<p></p>
+			<center><a href="#"><img src="img/btn.jpg"/></a></center>
+		</div>
+	</body>
+</html>
