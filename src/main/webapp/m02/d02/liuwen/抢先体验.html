@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>免费抢先体验</title>
+		<style>
+			#mydiv {
+				width: 300px;
+				height: 300px;
+				background: url(bg.jpg) no-repeat;
+			}
+			
+			#mydiv form {
+				padding-top: 60px;
+			}
+			ul li {
+				list-style: none;
+				
+			}
+			ul li input{
+				border-radius: 15%;
+			}
+			form p{
+				padding-left: 52px;
+			}
+			
+			form div{
+				padding-left: 70px;
+			}
+			ul li span{
+				color: red;
+			}
+			
+		</style>
+		<script>
+			window.onload = function() {
+				var year = document.getElementById("age");
+				var year = year.options;
+				for (var i = 1; i <= 130; i++) {
+					year[i] = new Option(i, i);
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="mydiv">
+			<form>
+				<ul>
+					<li>
+						<span>*</span>
+						姓名：
+						<input type="text" name="uname"  required/>
+					</li>
+					<li>
+						<span>*</span>
+						邮箱：
+						<input type="email" name="email" required />
+					</li>
+					<li>
+						<span>*</span>
+						电话：
+						<input type="text" name="tel" required/>
+					</li>
+				</ul>
+				<p>性别：
+					<select name="sex">
+						<option value="">请选择</option>
+						<option value="male">男</option>
+						<option value="female">女</option>
+					</select>
+				</p>
+				<p>年龄：
+					<select name="age" id="age">
+						<option value="">请选择</option>
+					</select>
+				</p>
+				<div>
+					<input type="image" src="btn.jpg" />
+				</div>
+			</form>
+		</div>
+	</body>
+
+</html>
