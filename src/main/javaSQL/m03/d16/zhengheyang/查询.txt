@@ -1,0 +1,18 @@
+e1:
+  2 SELECT bname,bid,author,pubcomp,price FROM book WHERE bid IN(SELECT nif     FROM borrow WHERE returndate IS NULL);
+  3 +--------------+------+--------------+-----------------------+-------+
+  4 | bname        | bid  | author       | pubcomp               | price |
+  5 +--------------+------+--------------+-----------------------+-------+
+  6 | 第二本书     | 0002 | 我是作者     | 我是出版社            |   100 |
+  7 | 红楼梦       | 0006 | 曹雪芹       | 北京大学出版社        |    50 |
+  8 | 西游记       | 0007 | 吴承嗯       | 清华大学出版社        |    20 |
+  9 +--------------+------+--------------+-----------------------+-------+
+ 10 3 rows in set (0.04 sec)
+ 11 
+ 12 case2:
+ 13 SELECT r.rname,b.bname,p.pdata,p.amount FROM penalty p INNER JOIN reader         r ON p.'rid' = r. 'rid' INNER JOIN book b ON  p.'bid' = b.'bid' WHE    RE p    .bid IN( SELECT bid FROM penalty WHERE pdate>'2018' );
+ 14  20
+ 15 
+ 16 case3:
+ 17 defo;
+
