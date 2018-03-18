@@ -9,7 +9,7 @@ SELECT nif FROM borrow b WHERE b.`nif`
 );
 #首先查到罚款的读者编号,再通过读者编号查询读者编号内的被罚款过的读者
 SELECT * FROM reader r WHERE r.`rid` IN(
-SELECT rid FROM penalty p WHERE p.`rid`
+SELECT rid FROM penalty p WHERE YEAR(p.`pdate`)>2017
 );
 #先通过还书为空的找到编号，再通过地址为空的找到编号，最后通过查询排序完成查找
 SELECT r.`rid`,r.`rname`,b.`bname`,c.`lenddate`,c.`willdate`FROM book b,borrow c,reader r WHERE r.`rid`=c.`rid` AND c.`nif`=b.`bid` AND r.`rid` IN(
