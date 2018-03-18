@@ -1,4 +1,4 @@
-#没有被读者借阅的图书信息
+﻿#没有被读者借阅的图书信息
 SELECT 
   bname AS 图书名称,
   bid AS 图书编号,
@@ -65,8 +65,6 @@ ORDER BY r.`rid` DESC,
 
 
 
-
-
 SELECT rid FROM reader WHERE raddress IS NULL;
 
 SELECT * FROM penalty;
@@ -84,30 +82,3 @@ SELECT * FROM borrow;
 SELECT * FROM penalty;
 
 SELECT DISTINCT nif FROM borrow;
-
-
-SELECT 
-  r.`rid` AS 读者编号,
-  r.`rname` AS 读者姓名,
-  b.`bname` AS 图书书名,
-  br.lenddate AS 借阅日期,
-  br.willdate AS 应还日期 
-FROM
-  reader r,
-  book b,
-  borrow br 
-WHERE r.`rid` = br.rid 
-  AND b.`bid` = br.nif 
-  AND r.`rid` IN 
-  (SELECT 
-    rid 
-  FROM
-    reader 
-  WHERE raddress IS NULL) 
-  AND br.rid IN 
-  (SELECT 
-    rid 
-  FROM
-    borrow 
-  WHERE returndate IS NULL) 
-ORDER BY r.`rid` DESC 
