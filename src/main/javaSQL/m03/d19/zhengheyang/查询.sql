@@ -4,12 +4,8 @@
 读者姓名 所借书的书名 应归还日期
 
 */
-SELECT  
-(SELECT rname FROM reader WHERE b.rid=rid ) AS 读者姓名,
-(SELECT bname FROM book WHERE b.nif=bid ) AS 书名,
-b.willdate AS 应归还时间
-FROM borrow b  
-WHERE willdate <NOW() AND returndate IS NULL;
+select * from reader r where not exists(
+select * from borrow where r.rid=rid);
 
 
 /*
