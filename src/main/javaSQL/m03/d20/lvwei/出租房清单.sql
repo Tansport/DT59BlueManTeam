@@ -16,6 +16,7 @@ WHERE hd.`DID` IN(
 		GROUP BY hd.`DID` HAVING COUNT(*)>1
 
 )
+ORDER BY ht.HTName
 
 
 /*
