@@ -1,8 +1,8 @@
 /**
  * Project Name:workspace1
- * File Name:Test.java
+ * File Name:Test1.java
  * Package Name:lession180326
- * Date:2018年3月27日下午2:38:16
+ * Date:2018年3月27日下午3:47:16
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
@@ -17,17 +17,17 @@ import java.util.List;
 
 /**
  * Description: <br/>
- * Date: 2018年3月27日 下午2:38:16 <br/>
+ * Date: 2018年3月27日 下午3:47:16 <br/>
  * 
  * @author lvwei
  * @version
  * @see
  */
-public class Test {
+public class Test1 {
 
     public static void main(String[] args) {
 
-        Test tt = new Test();
+        Test1 tt = new Test1();
         List<province> list = tt.getAll();
         for (province ff : list) {
             System.out.println(ff.getCid() + "\t" + ff.getCname() + "\t" + ff.getPname());
@@ -62,9 +62,9 @@ public class Test {
             rs = pst.executeQuery();
             while (rs.next()) {
                 province ff = new province();
-                ff.setCid(rs.getInt("cid"));
-                ff.setCname(rs.getString("cname"));
-                ff.setPname(rs.getString("pname"));
+                ff.setCid(rs.getInt(1));
+                ff.setCname(rs.getString(2));
+                ff.setPname(rs.getString(3));
                 list.add(ff);
             }
         } catch (Exception e) {
