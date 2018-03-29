@@ -2,15 +2,15 @@
  * Project Name:workspace1
  * File Name:province.java
  * Package Name:lession180326
- * Date:2018дЙ3тб27хуобнГ2:41:31
+ * Date:2018О©╫О©╫3О©╫О©╫27О©╫О©╫О©╫О©╫О©╫О©╫2:41:31
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package lession180326;
+package m03.d27.lvwei;
 
 /**
  * Description: <br/>
- * Date: 2018дЙ3тб27ху обнГ2:41:31 <br/>
+ * Date: 2018О©╫О©╫3О©╫О©╫27О©╫О©╫ О©╫О©╫О©╫О©╫2:41:31 <br/>
  * 
  * @author lvwei
  * @version

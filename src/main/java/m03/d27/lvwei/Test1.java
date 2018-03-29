@@ -2,11 +2,11 @@
  * Project Name:workspace1
  * File Name:Test1.java
  * Package Name:lession180326
- * Date:2018Äê3ÔÂ27ÈÕÏÂÎç3:47:16
+ * Date:2018ï¿½ï¿½3ï¿½ï¿½27ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½3:47:16
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package lession180326;
+package m03.d27.lvwei;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * Description: <br/>
- * Date: 2018Äê3ÔÂ27ÈÕ ÏÂÎç3:47:16 <br/>
+ * Date: 2018ï¿½ï¿½3ï¿½ï¿½27ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½3:47:16 <br/>
  * 
  * @author lvwei
  * @version
