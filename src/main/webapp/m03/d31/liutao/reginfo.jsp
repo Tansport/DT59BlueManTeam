@@ -13,7 +13,7 @@
  //name=new String(name.getBytes("ISO-8859-1"),"utf-8");当用get时；
  String name=request.getParameter("username");
  String password=request.getParameter("password");
- String[] chanal=request.getParameterValues("channel");
+ String[] channels=request.getParameterValues("channel");
 %>
 <div align="center">你输入的注册信息
 <table>
@@ -28,8 +28,10 @@
 <tr><td>信息来源:</td>
 <td>
 <% 
-for(String chanals:chanal){
-    out.println(chanals);
+if(channels!=null){
+for(String channel:channels){
+    out.println(channel);
+}
 }
 %>
 </td></tr>
