@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>TestDemo_zhengJsp</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!--为login.java类配置一个对外的虚拟路径
+	  servlet-name:为servlet-class下的类取一个别名
+	  servlet-clss:类的路径
+	  -->
+	<servlet>
+	<servlet-name>Login
+	</servlet-name>
+	<servlet-class>cn.javaweb.demo.Login
+	</servlet-class>
+</servlet>
+	<!-- 
+	
+	 -->
+	<servlet-mapping>
+		<servlet-name>Login
+		</servlet-name>
+		<url-pattern>/servlet/Login
+		</url-pattern>
+	</servlet-mapping>
+</web-app>
