@@ -5,8 +5,7 @@
  * Date:2018年3月27日下午2:53:18
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
-
-package com.dt59.exer;
+package m03.d27.liuwen;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
