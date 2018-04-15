@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Demo_dt59_servlet_pinhong</display-name>
+  <servlet>
+    <servlet-name>ServletInit</servlet-name>
+    <servlet-class>com.servlet.controller.ServletInit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletInit</servlet-name>
+    <url-pattern>/Init</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletManger</servlet-name>
+    <servlet-class>com.servlet.controller.ServletManger</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletManger</servlet-name>
+    <url-pattern>/Manger</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletManagerUser</servlet-name>
+    <servlet-class>com.servlet.controller.ServletManagerUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletManagerUser</servlet-name>
+    <url-pattern>/manager</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>spage</servlet-name>
+    <servlet-class>com.servlet.controller.spage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>spage</servlet-name>
+    <url-pattern>/spa</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>FirstPage</servlet-name>
+    <servlet-class>com.servlet.controller.FirstPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FirstPage</servlet-name>
+    <url-pattern>/First</url-pattern>
+  </servlet-mapping>
+    <welcome-file-list>
+    <welcome-file>Init</welcome-file>
+  </welcome-file-list>
+</web-app>
