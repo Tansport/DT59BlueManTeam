@@ -1,0 +1,115 @@
+/**
+ * Project Name:Demo_dt59_pinhong
+ * File Name:BizServiceImpl.java
+ * Package Name:com.dt59.service.impl
+ * Date:2018年4月12日下午7:16:53
+ * Copyright (c) 2018, bluemobi All Rights Reserved.
+ */
+
+package com.dt59.service.impl;
+
+import java.util.List;
+
+import com.dt59.dao.BizDao;
+import com.dt59.entity.Message;
+import com.dt59.entity.News;
+import com.dt59.entity.Page;
+import com.dt59.entity.Product;
+import com.dt59.entity.Revert;
+import com.dt59.entity.User;
+import com.dt59.service.BizService;
+
+/**
+ * Description: <br/>
+ * Date: 2018年4月12日 下午7:16:53 <br/>
+ * 
+ * @author WEN LIU
+ * @version
+ * @see
+ */
+public class BizServiceImpl implements BizService {
+    private BizDao bizDao;
+
+    public BizDao getBizDao() {
+        return bizDao;
+    }
+
+    public void setBizDao(BizDao bizDao) {
+        this.bizDao = bizDao;
+    }
+
+    @Override
+    public List<News> getAllNews() {
+
+        // Auto-generated method stub
+        return bizDao.getAllNews();
+    }
+
+    @Override
+    public List<Product> getAllProducts() {
+        // Auto-generated method stub
+        return bizDao.getAllProducts();
+    }
+
+    @Override
+    public boolean validateUser(User user) {
+        // Auto-generated method stub
+        return bizDao.validateUser(user);
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        // Auto-generated method stub
+        return bizDao.getAllUsers();
+    }
+
+    @Override
+    public String getUstatus(User user) {
+
+        // Auto-generated method stub
+        return bizDao.getUstatus(user);
+    }
+
+    @Override
+    public List<Product> getAllProductsByPage(Page page) {
+
+        // Auto-generated method stub
+        return bizDao.getAllProductsByPage(page);
+    }
+
+    @Override
+    public List<Message> getAllMessages() {
+
+        // Auto-generated method stub
+        return bizDao.getAllMessages();
+    }
+
+    @Override
+    public List<Message> getMessageById(int id) {
+
+        // Auto-generated method stub
+        return bizDao.getMessageById(id);
+    }
+
+    @Override
+    public List<Revert> getRevertById(int id) {
+
+        // Auto-generated method stub
+        return bizDao.getRevertById(id);
+    }
+
+    @Override
+    public int getProductNumber() {
+
+        // Auto-generated method stub
+        return bizDao.getProductNumber();
+    }
+
+    @Override
+    public int getUpdateRepaly(int mid, String rcontent, String rname) {
+
+        // Auto-generated method stub
+        return bizDao.getUpdateRepaly(mid, rcontent, rname);
+    }
+
+}
