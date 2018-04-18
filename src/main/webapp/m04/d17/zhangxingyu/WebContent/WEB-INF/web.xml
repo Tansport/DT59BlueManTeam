@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name></display-name>
+  <context-param>
+    <param-name>cparam</param-name>
+    <param-value>jack</param-value>
+  </context-param>
+  <listener>
+    <listener-class>com.dt59.lister.SessionAttributeAccessListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>com.dt59.controller.InitServlet</servlet-class>
+    <init-param>
+      <param-name>initParam</param-name>
+      <param-value>hello world!</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.dt59.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerUserServlet</servlet-name>
+    <servlet-class>com.dt59.controller.ManagerUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowProductServlet</servlet-name>
+    <servlet-class>com.dt59.controller.ShowProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PageServlet</servlet-name>
+    <servlet-class>com.dt59.controller.PageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MessageServlet</servlet-name>
+    <servlet-class>com.dt59.controller.MessageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RevertServlet</servlet-name>
+    <servlet-class>com.dt59.controller.RevertServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitServlet</servlet-name>
+    <url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerUserServlet</servlet-name>
+    <url-pattern>/managerUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowProductServlet</servlet-name>
+    <url-pattern>/showproduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageServlet</servlet-name>
+    <url-pattern>/page</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessageServlet</servlet-name>
+    <url-pattern>/message</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RevertServlet</servlet-name>
+    <url-pattern>/revert</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>init</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>setRevertServlet</display-name>
+    <servlet-name>setRevertServlet</servlet-name>
+    <servlet-class>com.dt59.controller.setRevertServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>setRevertServlet</servlet-name>
+    <url-pattern>/setRevertServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
