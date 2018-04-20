@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Demo_dt59_jspCh10_shopping</display-name>
+  <servlet>
+    <description></description>
+    <display-name>ShoppingServlet</display-name>
+    <servlet-name>ShoppingServlet</servlet-name>
+    <servlet-class>com.dt59.controller.ShoppingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShoppingServlet</servlet-name>
+    <url-pattern>/sp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.dt59.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InitSerlet</display-name>
+    <servlet-name>InitSerlet</servlet-name>
+    <servlet-class>com.dt59.controller.InitSerlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitSerlet</servlet-name>
+    <url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>upServlet</display-name>
+    <servlet-name>upServlet</servlet-name>
+    <servlet-class>com.dt59.controller.upServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>upServlet</servlet-name>
+    <url-pattern>/upServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
