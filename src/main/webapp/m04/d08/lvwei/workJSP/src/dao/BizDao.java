@@ -8,8 +8,6 @@
 
 package dao;
 
-import java.util.List;
-
 import entity.NewsInfo;
 import entity.UserInfo;
 import entity.comment_info;
