@@ -11,6 +11,7 @@ package dao;
 import java.util.List;
 
 import entity.shangping;
+import entity.shangpingche;
 
 /**
  * Description: <br/>
@@ -27,4 +28,6 @@ public interface BizDao {
     boolean User(String name, String upwd);
 
     shangping getshagshangpin(int spid);
+
+    int setche(shangpingche che);
 }

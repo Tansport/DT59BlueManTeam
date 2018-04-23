@@ -44,4 +44,14 @@
     <servlet-name>numServlet</servlet-name>
     <url-pattern>/num</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>buyServlet</display-name>
+    <servlet-name>buyServlet</servlet-name>
+    <servlet-class>controller.buyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>buyServlet</servlet-name>
+    <url-pattern>/buy</url-pattern>
+  </servlet-mapping>
 </web-app>

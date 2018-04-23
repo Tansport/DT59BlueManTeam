@@ -4,6 +4,7 @@ import java.util.List;
 
 import dao.BizDao;
 import entity.shangping;
+import entity.shangpingche;
 
 public class BizServicerImpl implements BizService {
 
@@ -36,6 +37,13 @@ public class BizServicerImpl implements BizService {
 
         // Auto-generated method stub
         return bizdao.getshagshangpin(spid);
+    }
+
+    @Override
+    public int setche(shangpingche che) {
+
+        // Auto-generated method stub
+        return bizdao.setche(che);
     }
 
 }

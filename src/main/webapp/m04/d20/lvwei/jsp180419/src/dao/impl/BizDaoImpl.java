@@ -6,6 +6,7 @@ import java.util.List;
 import dao.Basedao;
 import dao.BizDao;
 import entity.shangping;
+import entity.shangpingche;
 
 /**
  * Description: <br/>
@@ -89,5 +90,27 @@ public class BizDaoImpl extends Basedao implements BizDao {
             close(con, pst, rs);
         }
         return sp;
+    }
+
+    @Override
+    public int setche(shangpingche che) {
+
+        int flag = 0;
+        try {
+            String sql = "INSERT INTO shangpingche(spid,spname,spprice,spdesc,num,`count`) VALUES (?,?,?,?,?,?)";
+            pst = getCon().prepareStatement(sql);
+            pst.setInt(1, che.getSpid());
+            pst.setString(2, che.getSpname());
+            pst.setFloat(3, che.getSpprice());
+            pst.setString(4, che.getSpdesc());
+            pst.setInt(5, che.getNum());
+            pst.setFloat(6, che.getCount());
+            flag = pst.executeUpdate();
+        } catch (Exception e) {
+            // TODO: handle exception
+        } finally {
+            close(con, pst, rs);
+        }
+        return flag;
     }
 }
