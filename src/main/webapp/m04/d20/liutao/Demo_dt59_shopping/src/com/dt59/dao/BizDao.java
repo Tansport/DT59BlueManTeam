@@ -11,6 +11,7 @@ package com.dt59.dao;
 import java.util.List;
 
 import com.dt59.entity.Shopping;
+import com.dt59.entity.Totle;
 import com.dt59.entity.User;
 
 /**
@@ -30,5 +31,8 @@ public interface BizDao {
 
     // 依据sid将商品加入购物车
     Shopping getAllbyId(int sid);
+
+    // 插入数据进入购物车
+    int getTotle(Totle totle);
 
 }

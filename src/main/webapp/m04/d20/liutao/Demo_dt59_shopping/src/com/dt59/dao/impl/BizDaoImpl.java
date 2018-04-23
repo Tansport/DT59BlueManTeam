@@ -14,6 +14,7 @@ import java.util.List;
 import com.dt59.dao.BaseDao;
 import com.dt59.dao.BizDao;
 import com.dt59.entity.Shopping;
+import com.dt59.entity.Totle;
 import com.dt59.entity.User;
 
 /**
@@ -100,6 +101,31 @@ public class BizDaoImpl extends BaseDao implements BizDao {
 
         // Auto-generated method stub
         return sp;
+    }
+
+    @Override
+    public int getTotle(Totle totle) {
+        int flag = 0;
+        try {
+            String sql = "INSERT INTO sptotle(spid,spname,spcount,spprice,spdesc,sptotle) VALUES(?,?,?,?,?,?)";
+            pst = getCon().prepareStatement(sql);
+            pst.setInt(1, totle.getSpid());
+            pst.setString(2, totle.getSpname());
+            pst.setInt(3, totle.getSpcount());
+            pst.setFloat(4, totle.getSpprice());
+            pst.setString(5, totle.getSpdesc());
+            pst.setFloat(6, totle.getSptotle());
+            flag = pst.executeUpdate();
+
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        } finally {
+            close(con, pst, rs);
+        }
+
+        // Auto-generated method stub
+        return flag;
     }
 
 }

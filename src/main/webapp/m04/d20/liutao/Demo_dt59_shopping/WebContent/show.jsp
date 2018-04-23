@@ -9,6 +9,29 @@
 <title></title>
 <script>
 window.onload=function(){
+	//1.定义xmlHttpRequest
+	var xmlHttpRequest;
+	function loadAjax(){
+		//看浏览器支持
+		try {
+			// Firefox, Opera 8.0+, Safari
+			xmlHttpRequest=new XMLHttpRequest();
+		} catch (e) {
+			 // Internet Explorer
+			try {
+				xmlHttpRequest=new ActiveXObject("Msxml2.XMLHTTP");//微软xml2格式
+			} catch (e) {
+				try {
+					xmlHttpRequest=new ActiveXObject("Microsoft.XMLHTTP");
+				} catch (e) {
+					alert("你的浏览器步支持AJAX!");
+					return false;
+					
+				}
+			}
+			
+		}
+	}
 	function abc(){
 		var tby=document.getElementById("tby");
 		var ct=tby.children;//tby对象所有子节点
@@ -28,6 +51,25 @@ window.onload=function(){
 							//重新赋值
 							this.parentNode.children[1].value=n;
 							abc();
+							loadAjax();
+							//2.回调函数
+							xmlHttpRequest.onreadystatechange=function(){
+								if(xmlHttpRequest.responseText==4){
+									alert(xmlHttpRequest.responseXML);
+								}
+								
+							}
+							//3.初始化xmlHttpRequest组建
+							var spid=this.parentNode.parentNode.children[0].innerHTML;
+							var spname=this.parentNode.parentNode.children[1].innerHTML;
+							var spcount=this.parentNode.children[1].value;
+							var sprice=this.parentNode.parentNode.children[3].innerHTML;
+							var spdesc=this.parentNode.parentNode.children[4].innerHTML;
+							var sptotle=this.parentNode.parentNode.children[5].children[0].value;
+xmlHttpRequest.open("get","ajax?spid="+spid+"&spname="+spname+"&spcount="+spcount+"&sprice="+sprice+"&spdesc="+spdesc+"&sptotle="+sptotle,true);
+							//4.发送请求
+							xmlHttpRequest.send(null);//发送json格式						
+							
 						}
 				}
 			//减法
@@ -41,6 +83,7 @@ window.onload=function(){
 								}
 							this.parentNode.children[1].value=n;
 							abc();
+							
 						}
 		}
 	}

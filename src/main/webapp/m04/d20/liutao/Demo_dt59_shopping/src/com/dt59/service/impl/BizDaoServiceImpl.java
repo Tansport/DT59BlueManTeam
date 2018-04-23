@@ -12,6 +12,7 @@ import java.util.List;
 
 import com.dt59.dao.BizDao;
 import com.dt59.entity.Shopping;
+import com.dt59.entity.Totle;
 import com.dt59.entity.User;
 import com.dt59.service.BizDaoService;
 
@@ -53,6 +54,13 @@ public class BizDaoServiceImpl implements BizDaoService {
 
         // Auto-generated method stub
         return bizdao.getAllbyId(sid);
+    }
+
+    @Override
+    public int getTotle(Totle totle) {
+
+        // Auto-generated method stub
+        return bizdao.getTotle(totle);
     }
 
 }
