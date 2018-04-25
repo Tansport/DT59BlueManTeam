@@ -1,6 +1,9 @@
 package com.dt59.servlet;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,6 +13,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 
 /**
  * Servlet implementation class AjaxServlet
@@ -55,28 +61,37 @@ public class AjaxServlet extends HttpServlet {
 	    request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html");
-        String province= request.getParameter("province");
-        PrintWriter out= response.getWriter();
-        //思考：根据code获取省份和城市
-       ArrayList<String> arrli=new ArrayList<String>();
-       arrli.add("武汉");
-       arrli.add("襄阳");
-       ArrayList<String> arrli2=new ArrayList<String>();
-       arrli2.add("深圳");
-       arrli2.add("惠州");
-       ArrayList<String> arrli3=new ArrayList<String>();
-       arrli3.add("郑州");
-       arrli3.add("南阳");
-        HashMap<String, ArrayList<String>> haar=new HashMap<String, ArrayList<String>>();
-        haar.put("湖北",arrli );
-        haar.put("广州",arrli2 );
-        haar.put("河南",arrli3 );
-        if(haar.containsKey("province")){
-           out.print(haar.containsKey(province));
-        }
-       
+//        String province= request.getParameter("province");
+        String[] city=null;
+        InputStream ist=request.getInputStream();
+        InputStreamReader isrr=null;
+        BufferedReader br=null;
+        PrintWriter out=response.getWriter();
+       try {
+           isrr=new InputStreamReader(ist,"utf-8");
+           br=new BufferedReader(isrr);
+           String str= br.readLine();
+//           System.out.println("str:"+str);
+           JSONObject jobj= JSONObject.fromObject(str);
+           String obj= (String)jobj.get("pro");
+           if(obj.equals("湖北")){
+               city=new String[]{"武汉","浠水","蕲春"};
+           }else if(obj.equals("湖南")){
+               city=new String[]{"长沙","岳阳","绍山"};
+           }else if(obj.equals("广东")){
+               city=new String[]{"广州","惠州"};
+           }
+           JSONArray jarr= JSONArray.fromObject(city);
+           out.write(jarr.toString());
+    } catch (Exception e) {
+        // TODO: handle exception
+        e.printStackTrace();
+    }finally{
         out.flush();
-        out.close(); 
+        out.close();
+        br.close();
+        isrr.close();
+    }
 	}
 
 }
