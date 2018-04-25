@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,18 +9,23 @@
 <script type="text/javascript" src="js/json2.js"></script>
 <script type="text/javascript">
 	$(function() {
-		$("#province").change(function(){
-			var province=$(this).val();
+		$("select[id='province']").change(function(){
+			alert($(this).val());
+			var province=$(this).val();/* 改变的值传递过去 */
+			var pro={"pro":province};//json格式
 			$.ajax({
 				url:"ajax",
-				type:"post",
-				date:"province="+province,
-				dataType:"json",
-				success: function(date){
-					$arraysele.empty();
-					for(var i=0;i<date.length;i++){						
-						$arraysele.append("<option>"+date[i]+"</option>")
+				type:"POST",
+				data:JSON.stringify(pro),
+				dataType:"json",//json指得是回调函数返回得数据类型
+				success: function(message){
+					$("select[id='city']>option").remove();
+					for(var i=0;i<message.length;i++){
+						
+						$("#city").append("<option>"+message[i]+"</option>");//追加
 					}
+
+					
 					
 				},
 				error:function(){
@@ -33,13 +38,13 @@
 <title>选择城市</title>
 </head>
 <body>
-	省份<select id="arraysel">
-		<option>请选择</option>
-		<option value="province" name="province"></option>
-	</select>
-	<br>
-	城市<select id="arraysele">
-		
-	</select>
+ <select id="province">
+    	<option value="湖北">湖北</option>
+    	<option value="湖南">湖南</option>
+    	<option value="广东">广东</option>
+    </select>省
+    <select id="city">
+    	<option>请选择.......</option>
+    </select>市
 </body>
 </html>
