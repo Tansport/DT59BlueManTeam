@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("input").toggle(
+					function() {
+						$("body").css("background", "yellow");
+					},
+					function() {
+						$("body").css("background", "#00FFFF");
+					},
+					function() {
+						$("body").css("background", "#DC143C");
+					}
+				);
+				$("input").click(function() {
+					$("p").toggle();
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="点我吧" />
+		<p>我一会显示一会隐藏</p>
+	</body>
+
+</html>

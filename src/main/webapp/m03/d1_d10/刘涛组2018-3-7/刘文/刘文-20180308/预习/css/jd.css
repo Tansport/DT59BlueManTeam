@@ -1,0 +1,13 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	width: 250px;
+	height: 200px;
+	border: 1px red solid;
+}
+ul{
+	line-height: 30px;
+}
+

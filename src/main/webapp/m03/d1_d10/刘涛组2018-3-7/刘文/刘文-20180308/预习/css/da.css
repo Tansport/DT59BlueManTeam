@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#mydiv{
+	width: 350px;
+	height: 254px;
+	border: 1px black solid;
+	line-height: 35px;
+	margin: 0px auto;
+	text-align: center;
+}
+li{
+	/*text-decoration:underline;*/
+	border-bottom: 1px gainsboro dashed;
+	list-style-type: none;
+	/*border-right: none;
+	border-left: none;*/
+}
+/*h2{
+	background: red;
+	color: white;
+}*/

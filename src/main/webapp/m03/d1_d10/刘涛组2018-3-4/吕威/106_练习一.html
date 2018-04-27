@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>练习1</title>
+
+	</head>
+
+	<body id="no1">
+		<script type="text/javascript">
+			var person = {
+				name: "姓名：朗晓明",
+				age: "年龄：38",
+				job: "工作：中国内地演员、歌手",
+				address: "住址：中国北京海淀区",
+				intro: function() {
+					var str = this.name;
+					var str1 = this.age;
+					var str2 = this.job;
+					var str3 = this.address;
+					document.getElementById("no1").innerHTML = str + "<br/>" + str1 + "<br/>" + str2 + "<br/>" + str3;
+				}
+			}
+			person.intro();
+		</script>
+	</body>
+
+</html>

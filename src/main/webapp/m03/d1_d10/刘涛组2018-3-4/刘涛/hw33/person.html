@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>person</title>
+		<script>
+			window.onload=function(){
+			var person=new Object();
+			person.name="郎小明";
+			person.age="38";
+			person.jop="中国内地男演员、歌手";
+			person.address="中国北京海淀区";
+			person.intro=function(){
+				var str="姓名:"+this.name+"<br/>年龄:"+this.age+"<br/>工作:"+this.jop+"<br/>地址:"+this.address;
+                document.getElementById("intro").innerHTML=str;
+			}
+			person.intro();
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h4 id="intro"></h4>
+	</body>
+</html>

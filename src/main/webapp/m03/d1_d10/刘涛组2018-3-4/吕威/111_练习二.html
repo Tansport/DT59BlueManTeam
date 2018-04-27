@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>练习二</title>
+	</head>
+
+	<body id="no1">
+		<script type="text/javascript">
+			function person() {
+
+			}
+			person.prototype.name = "姓名：朗晓明",
+				person.prototype.age = "年龄：38",
+				person.prototype.job = "工作：中国内地演员、歌手",
+				person.prototype.address = "住址：中国北京海淀区",
+				person.prototype.intro = function() {
+					document.getElementById("no1").innerHTML = this.name + "<br/>" + this.age + "<br/>" + this.job + "<br/>" + this.address;
+				}
+				var per=new person();
+				per.intro();
+		</script>
+	</body>
+
+</html>

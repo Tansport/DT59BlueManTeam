@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <link type="text/css" rel="stylesheet" href="shopping.css" />
+		 <script>
+		 	function close1() {
+	window.close();
+}
+
+function minus(num) {
+	var prices = document.getElementsByName("price")[num].value;
+	var count = parseInt(document.getElementsByName("amount")[num].value) - 1;
+	if (count < 1) {} else {
+		document.getElementsByName("amount")[num].value = count;
+		var totals = parseFloat(prices * count);
+		document.getElementById("price" + num).innerHTML = "¥" + totals.toFixed(2);
+		total();
+	}
+}
+
+function plus(num) {
+	var prices = document.getElementsByName("price")[num].value;
+	var count = parseInt(document.getElementsByName("amount")[num].value) + 1;
+	document.getElementsByName("amount")[num].value = count;
+	var totals = parseFloat(prices * count);
+	document.getElementById("price" + num).innerHTML = "¥" + totals.toFixed(2);
+	total();
+}
+
+function total() {
+	var prices = document.getElementsByName("price");
+	var count = document.getElementsByName("amount");
+	var sum = 0;
+	for (var i = 0; i < prices.length; i++) {
+		sum += prices[i].value * count[i].value;
+	}
+	document.getElementById("totalPrice").innerHTML = "¥" + sum.toFixed(2);
+}
+total();
+		 </script>
+	</head>
+	<body>
+		<div class="content">
+    <div class="logo">
+        <img src="js/dd_logo.jpg"><span onclick="close1();">关闭</span>
+    </div>
+    <div class="cartList" id="cartList">
+        <table>
+            <td>¥<input type="text" name="price" value="21.90"></td>
+            <td><input type="button" name="minus" value="-" onclick="minus(0);"><input type="text" name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(0);"></td>
+            <td id="price0">¥21.90</td>
+        </table>
+        <table>
+            <td>¥<input type="text" name="price" value="24.00"></td>
+            <td><input type="button" name="minus" value="-" onclick="minus(1);"><input type="text" name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(1);"></td>
+            <td id="price1">¥24.00</td>
+        </table>
+        <table class="table1">
+            <td id="totalPrice">&nbsp;</td>
+            <td><span onclick="accounts();">结 算</span></td>
+        </table>
+    </div>
+    <div></div>
+</div>
+<script type="text/javascript" src="shopping.js"></script>
+	</body>
+</html>

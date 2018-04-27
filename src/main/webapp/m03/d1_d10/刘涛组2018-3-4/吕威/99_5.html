@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>图书周排行榜</title>
+		<style type="text/css">
+
+			
+			p>span {
+				color: red;
+			}
+			
+			.no3 {
+				font-size: 15px;
+			}
+			
+			li {
+				font-size: 15px;
+				/*display: inline-block;*/
+				padding: 10px;
+			}
+			
+			a {
+				display: inline-block;
+				border-radius: 10px;
+				background-color: greenyellow;
+				text-decoration: none;
+				/*border: 1px yellow solid;*/
+				width: 60px;
+				height: 25px;
+				text-align: center;
+				line-height: 23px;
+				/*float: left;*/
+			}
+			
+			ol {
+				display: block;
+				/*border: 1px yellow solid;*/
+				width: 170px;
+				position: relative;
+				left: 4px;
+				padding-left: 20px;
+				/*padding-right:100px ;*/
+			}
+		
+			
+			#body {
+				/*display: block;*/
+				border: 1px blue solid;
+				margin: 0px;
+				width: 200px;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			function over(k) {
+				var a1 = document.getElementById("div1");
+				var a11 = document.getElementById("body")
+				var a2 = document.getElementById("div2")
+				if(k == 1) {
+					a1.setAttribute("style", "display: block;")
+					a11.setAttribute("style", "background-color:  goldenrod;")
+					a2.setAttribute("style", "display: none;")
+				}
+				if(k == 2) {
+					a1.setAttribute("style", "display: none;")
+					a11.setAttribute("style", "background-color:  darkgoldenrod;")
+					a2.setAttribute("style", "display: block;")
+				}
+				if(k == 3) {
+					a1.setAttribute("style", "display: block;")
+					a11.setAttribute("style", "background-color:  goldenrod;")
+					a2.setAttribute("style", "display: none;")
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="body" style="background-color: goldenrod;">
+			<p>图书周排行榜<span>Top 100</span></p>
+			<p class="no3">近7天销量，每天更新</p>
+			<a href="" onmouseover="over(1)">小说</a>
+			<a href="" onmouseover="over(2)">非小说</a>
+			<a href="" onmouseover="over(3)">少儿</a>
+			<ol id="div1" style="display: block;">
+				<li>时间旅行者</li>
+				<li>女心理师（下）</li>
+				<li>鬼吹灯之精绝古城</li>
+				<li>女心理师（上）</li>
+				<li>小时候</li>
+				<li>追风筝的人</li>
+				<li>盗墓笔记2</li>
+				<li>输赢</li>
+			</ol>
+			<ol id="div2" style="display: none;">
+				<li>人生若只如初见</li>
+				<li>高效能人士的七个</li>
+				<li>求医不如求己</li>
+				<li>人体使用手册</li>
+				<li>孩子，把你的手给我</li>
+				<li>别笑！我是英文单字书</li>
+				<li>人体经络使用手册</li>
+				<li>股市稳赚</li>
+			</ol>
+		</div>
+
+	</body>
+
+</html>

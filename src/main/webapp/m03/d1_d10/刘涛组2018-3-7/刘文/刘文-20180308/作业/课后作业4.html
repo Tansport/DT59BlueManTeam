@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<style type="text/css">
+			#mydiv {
+				width: 200px;
+				height: 200px;
+				background-image: url(img/pic.gif);
+				/*border: 1px red solid;*/
+			}
+		</style>
+
+		<script src="jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(document).ready(function() {
+				$("#mydiv").click(function() {
+					//					alert("aaaaaa");
+					//					$("#mydiv").css({
+					//						"border","2px"
+					//					});
+					$("#mydiv").css({
+						"border-width": "5px",
+						"border-style":"solid",
+						"border-color":"red"
+					});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="mydiv">
+
+		</div>
+	</body>
+
+</html>

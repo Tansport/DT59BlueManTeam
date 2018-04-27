@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#d1 li {
+				list-style: none;
+				padding: 8px;
+			}
+		</style>
+		<script>
+			function abc() {
+				var uu = document.getElementById("d1");
+				var li = uu.childNodes[5];
+				var cc = li.cloneNode(true);
+			    uu.appendChild(cc);
+			}
+		</script>
+	</head>
+
+	<body>
+		<ul id="d1">
+			<li>
+				文件路径：<input type="button" value="选择文件" />产品经理例会.mmap
+			</li>
+			<li>
+				文件路径：<input type="button" value="选择文件" />平台建议.xls
+			</li>
+			<li>
+				文件路径：<input type="file" value="选择文件" />
+			</li>
+		</ul>
+		<input type="button" value="再上传一个文件" onClick="abc();" />
+	</body>
+
+</html>

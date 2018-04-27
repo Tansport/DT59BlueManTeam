@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>病毒页面效果</title>
+		<script type="text/javascript">
+			function abc() {
+				var a1 = Math.floor(Math.random() * 500);
+				var a2 = Math.floor(Math.random() * 100);
+				window.open("virus.html", "", "height=200px,width=200px,top=" + a1 + ",left=" + a2 + ",scrollbars=1,resizable=1");
+				t = setInterval("abc()", 3000);
+			}
+			abc();
+		</script>
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<img src="webPic.jpg" alt="首页图片" />
+	</body>
+
+</html>

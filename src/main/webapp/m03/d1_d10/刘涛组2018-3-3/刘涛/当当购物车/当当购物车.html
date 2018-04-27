@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>当当购物车</title>
+		<style>
+			#mydiv,#cc{
+				width: 810px;
+				margin: auto;
+			}
+			#mydiv{
+				height: 70px;
+
+			}
+			#cc{
+				height: 400px;
+			}
+			table{
+				width: 420px;
+				border-collapse: collapse;
+				position: relative;	
+				left:650px;	
+				top:-300px;	
+				font-size: 10px;
+				text-align: center;	
+				color:dimgrey;	
+			}
+			td{
+				width: 105px;
+	            height: 100px;
+			}
+			#dd{
+				font-size:15px;
+				color: red;
+				position: relative;
+				left:14px;
+				top:7px;
+			}	
+			.cc{
+				font-size:13px;
+				color: black;
+			}
+			.cc input{
+				width:40px;
+				background-color:rgb(250,250,250);
+				border: hidden;
+			}
+			input{
+				width: 25px;
+				margin: 0px;
+				padding: 0px;
+				border-left:none;
+				border-right: none;
+				text-align: center;
+			}
+			#cc span{
+				width:60px;
+				height: 30px;
+				font-size:14px;
+				color: white;
+				background: red;
+				float: right;
+				text-align: center;
+				line-height: 30px;
+				border-radius: 5px;	
+				cursor: pointer;
+			}
+			#clo1{
+				position: relative;
+				top:-460px;
+				left:-20px;
+			}
+			#clo2{
+				cursor: pointer;
+				position:relative;
+				left: 40px;
+				top:-50px
+				
+			}
+			.c2 input{
+				margin: 0px;
+				padding: 0px;
+				border: 1px #999999 solid;
+				
+			}
+			.c2 input[name="count"]{
+				width: 35px;
+				margin: 0px;
+				border-right: none ;
+			}
+			.c2 input[name="minus"]{
+				border-right: none;
+			}
+			.c2 input[name="plus"]{
+				border-left: none;
+			}
+			a{
+				cursor: pointer;
+			}			
+		</style>
+		<script>
+			function close1(){
+				window.close();
+			}
+			function co(){
+				var flag=confirm("移入收藏后，将不再购物车显示，是否继续操作?")
+				if(flag==true){
+					alert("移入收藏成功！")
+				}
+				
+			}
+			function del(){
+				var flag=confirm("您确定要删除商品吗?")
+				if(flag=true){
+					alert("删除成功！")
+				}
+			}
+			function minu(num){
+				var vv=document.getElementsByName("price")[num].value;
+				var v1=parseInt(document.getElementsByName("count")[num].value)-1;
+				if(v1<1){
+				alert("购买数量不能小于1");
+				}else{
+					document.getElementsByName("count")[num].value=v1;
+					var tot=parseFloat(vv*v1);
+					document.getElementById("tota"+num).innerHTML="¥"+tot.toFixed(2);
+					
+				}
+				total();
+			}
+			function plus(num){
+				var vv=document.getElementsByName("price")[num].value;
+				var v1=parseInt(document.getElementsByName("count")[num].value)+1;
+					document.getElementsByName("count")[num].value=v1;
+					var tot=parseFloat(vv*v1);
+					document.getElementById("tota"+num).innerHTML="¥"+tot.toFixed(2);
+					total();
+				}
+			function total(){
+				var price=document.getElementsByName("price");
+				var cou=document.getElementsByName("count");
+				var sum=0;
+				for(var i=0;i<price.length;i++){
+					sum+=price[i].value*cou[i].value;
+				}
+				document.getElementById("totalprice").innerHTML="¥"+sum.toFixed(2);
+			}
+			total();
+			
+		
+		</script>
+	</head>
+	<body>
+		<div id="mydiv">
+			<img  src="img/dd_logo.jpg"/>
+		</div>
+		<div id="cc">
+			<img  src="img/shoppingBg.jpg"/>
+			<span  id="clo1" onclick="close1()">关闭</span>
+			<span  id="clo2" >结算</span>
+		</div>
+		<table>
+			<tr>
+				<td class="cc">¥<input type="text" name="price" value="21.90"></td>
+				<td class="c2">
+					<input type="button" name="minus" value="-"  onclick="minu(0)"/><input type="text" name="count" value="1"  class="c1"/><input type="button" name="plus " value="+" onclick="plus(0)"/>
+				</td>
+				<td id="tota0">¥21.90</td>
+				<td><a onclick="co()">移入收藏</a><br>
+				    <a onclick="del()">删除</a>
+				</td>
+			</tr>
+			<tr>
+				<td class="cc">¥<input type="text" name="price" value="24.00"></td>
+				<td class="c2">
+					<input type="button" name="minus" value="-"  onclick="minu(1)"/><input type="text" name="count" value="1"  class="c1"/><input type="button" name="plus " value="+" onclick="plus(1)"/>
+				</td>
+				<td id="tota1">¥24.00</td>
+				<td>
+					<a onclick="co()">移入收藏</a><br>
+				    <a onclick="del()">删除</a>
+				</td>
+			</tr>
+			<tr >
+				<td colspan="4"><div id="dd"><span id="totalprice">&nbsp;</span></div></td>
+			</tr>
+		</table>
+		
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+				function Person(name,age,js){
+				Person.prototype.name="高乐乐"
+			    Person.prototype.age="15";
+			    Person.prototype.js="我叫高乐乐，我是一个初三的学生，我非常喜欢音乐和打篮球";
+                Person.prototype.mydiv=function(){
+                	var str="姓名:"+this.name+"<br/>年龄"+this.age+"<br/>自我介绍:"+this.js;
+					document.getElementById("mydiv").innerHTML=str;
+				}
+               }
+                var person=new Person();
+                person.mydiv();
+			}
+		</script>
+	</head>
+	<body>
+	<div id="mydiv"></div>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>上传文件</title>
+		<script type="text/javascript">
+			function abc() {
+				var a1 = document.getElementById("no1");
+				var a2 = a1.firstElementChild;
+				var a3 = a2.cloneNode(true);
+				a1.appendChild(a3);
+			}
+		</script>
+	</head>
+
+	<body>
+		<span id="no1">
+			<div id="">
+				文件路径：<input type="file" name="" id="" value="选择文件" /><br /><br />
+			</div>
+			
+		</span>
+		<input type="button" name="" id="" value="再上传一个文件" onclick="abc()" />
+	</body>
+
+</html>

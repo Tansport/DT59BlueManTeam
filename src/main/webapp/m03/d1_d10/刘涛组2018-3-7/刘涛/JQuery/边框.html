@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>边框</title>
+		<style>
+			img{
+				cursor: pointer;
+				/*border:1px crimson solid;*/
+				
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			$("img").click(function(){
+//				$(this).css({border:"1px",})
+				$(this).css("border","solid");
+//				$(this.css("border","brown");
+//				$(this).css("border","solid");
+			})
+			})
+		</script>
+	</head>
+	<body>
+		<img src="img/pic.gif" />
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function abc(){
+				function Person(name, age, job, address) {
+					this.name = name;
+					this.age = age;
+					this.job = job;
+					this.address = address;
+					this.intro = function() {
+						var srt = "姓名：" + this.name + "<br/>年龄：" + this.age + "<br/>工作：" + this.job + "<br/>住址：" + this.address;
+						document.getElementById("intro").innerHTML = srt;
+					}
+				}
+				var person = new Person("郎小明", "38", "中国内地男演员、歌手", "中国北京海定区");
+				person.intro();
+
+				function Person1(name, age, job, address) {
+					Person1.prototype.name = "郎小明";
+					Person1.prototype.age = "38";
+					Person1.prototype.job = "中国内地男演员、歌手";
+					Person1.prototype.address = "中国北京海定区";
+					Person1.prototype.intro1 = function() {
+						var srt = "姓名：" + this.name + "<br/>年龄：" + this.age + "<br/>工作：" + this.job + "<br/>住址：" + this.address;
+						document.getElementById("intro1").innerHTML = srt;
+					}
+				}
+				var person1 =new Person1();
+				person1.intro1();
+			}
+		</script>
+	</head>
+	<body onload="abc()">
+		<p id="intro"></p>
+		<p id="intro1"></p>
+	</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				margin: 0px;
+				padding: 0px;
+				/*border: 1px red solid;*/
+			}
+			
+			#mydiv {
+				width: 800px;
+				margin: 0 auto;
+			}
+			
+			.logo {
+				position: relative;
+				top: 10px;
+			}
+			
+			.logo span {
+				float: right;
+				width: 60px;
+				line-height: 30px;
+				border: 1px red solid;
+				background-color: red;
+				color: white;
+				border-radius: 25px;
+				text-align: center;
+				margin-top: 5px;
+				margin-right: 10px;
+				cursor: pointer;
+			}
+			
+			#cartList {
+				margin-top: 20px;
+				background-image: url(img/shoppingBg.jpg);
+				height: 414px;
+				overflow: hidden;
+			}
+			
+			.cartList table {
+				float: right;
+				position: relative;
+				top: 100px;
+				left: -15px;
+			}
+			
+			.cartList table tr:nth-of-type(1) {
+				margin-top: 125px;
+			}
+			
+			.cartList table tr:nth-of-type(2) {
+				margin-top: 70px;
+			}
+			
+			.cartList table tr td {
+				font-family: "微软雅黑";
+				font-size: 12px;
+				color: #666666;
+				text-align: center;
+				line-height: 25px;
+			}
+			
+			.cartList table tr td input[name="price"] {
+				border: none;
+				background: transparent;
+				width: 45px;
+				text-align: center;
+			}
+			
+			.cartList table tr td input[name="amount"] {
+				width: 45px;
+				text-align: center;
+				border: 1px #999999 solid;
+				border-left: none;
+				border-right: none;
+				height: 21px;
+			}
+			
+			.cartList table tr td input[name="minus"],
+			.cartList table tr td input[name="plus"] {
+				height: 25px;
+				border: 1px #999999 solid;
+				width: 25px;
+				text-align: center;
+			}
+			
+			.cartList table tr td:nth-of-type(1) {
+				width: 130px;
+			}
+			
+			.cartList table tr td:nth-of-type(2) {
+				width: 100px;
+			}
+			
+			.cartList table tr td:nth-of-type(3) {
+				width: 130px;
+				height: 104px;
+			}
+			
+			.cartList table tr td p {
+				cursor: pointer;
+			}
+			
+			#totalPrice {
+				text-align: left;
+				color: red;
+				font-size: 20px;
+			}
+			
+			.cartList table tr:nth-of-type(3):last-child span1 {
+				float: right;
+				width: 60px;
+				line-height: 35px;
+				border: 1px red solid;
+				background-color: red;
+				color: white;
+				text-align: center;
+				margin-top: 5px;
+				margin-right: 10px;
+				cursor: pointer;
+				font-size: 15px;
+				
+			}
+			.cartList table tr:nth-of-type(3):last-child span1:hover{
+				transform: scale(1.5);
+			}
+		</style>
+		<script type="text/javascript">
+			function close_plan() {
+				window.close();
+			}
+
+			function collection() {
+				var flag = confirm("移入收藏后，将不再购物车显示，是否继续操作?");
+				if(flag == true) {
+					alert("移入收藏成功!");
+				}
+			}
+
+			function del() {
+				var flag = confirm("您确定要删除商品吗?");
+				if(flag == true) {
+					alert("删除成功!");
+				}
+			}
+
+			function minus(num) {
+				var prices = document.getElementsByName("price")[num].value;
+				var count = parseInt(document.getElementsByName("amount")[num].value) - 1;
+				if(count < 1) {
+					alert("不能再减了，再减就没有啦！");
+				} else {
+					document.getElementsByName("amount")[num].value = count;
+					var totals = parseFloat(prices * count);
+					document.getElementById("price" + num).innerHTML = "¥" + totals.toFixed(2);
+					total();
+				}
+			}
+
+			function plus(num) {
+				var prices = document.getElementsByName("price")[num].value;
+				var count = parseInt(document.getElementsByName("amount")[num].value) + 1;
+				document.getElementsByName("amount")[num].value = count;
+				var totals = parseFloat(prices * count);
+				document.getElementById("price" + num).innerHTML = "¥" + totals.toFixed(2);
+				total();
+			}
+
+			function total() {
+				var prices = document.getElementsByName("price");
+				var count = document.getElementsByName("amount");
+				var sum = 0;
+				for(var i = 0; i < prices.length; i++) {
+					sum += prices[i].value * count[i].value;
+				}
+				document.getElementById("totalPrice").innerHTML = "¥" + sum.toFixed(2);
+			}
+			total();
+		</script>
+	</head>
+
+	<body onload="total();">
+		<div id="mydiv">
+			<div class="logo">
+				<img src="img/dd_logo.jpg"><span onclick="close_plan();">关闭</span>
+			</div>
+			<div class="cartList" id="cartList">
+				<table id="mydiv1" border="0px" cellspacing="0px" cellpadding="0px">
+					<tr>
+						<td>¥<input type="text" name="price" value="21.90"></td>
+						<td><input type="button" name="minus" value="-" onclick="minus(0);"><input type="text" name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(0);"></td>
+						<td id="price0">¥21.90</td>
+						<td>
+							<p onclick="collection();">移入收藏</p>
+							<p onclick="del();">删除</p>
+						</td>
+					</tr>
+					<tr>
+						<td>¥<input type="text" name="price" value="24.00"></td>
+						<td><input type="button" name="minus" value="-" onclick="minus(1);"><input type="text" name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(1);"></td>
+						<td id="price1">¥24.00</td>
+						<td>
+							<p onclick="collection();">移入收藏</p>
+							<p onclick="del();">删除</p>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td id="totalPrice">&nbsp;</td>
+						<td><span1 onclick="accounts();">结 算</span></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+
+</html>

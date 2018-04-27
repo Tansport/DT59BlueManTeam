@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			.nav-box {
+				width: 210px;
+				margin: 5px 0 0 5px;
+			}
+			
+			.nav-top a {
+				display: block;
+				height: 45px;
+				font-size: 16px;
+				line-height: 45px;
+				padding: 0 10px;
+				background: #B1191A;
+				color: #fff;
+			}
+			
+			ul {
+				background: #c81623;
+				list-style: none;
+				padding-bottom: 1px;
+			}
+			
+			ul li {
+				height: 30px;
+				line-height: 30px;
+				font-size: 14px;
+				color: #fff;
+				position: relative;
+				padding-left: 5px;
+			}
+			
+			.orange {
+				background-color: orange;
+			}
+			
+			ul li a {
+				color: #fff;
+			}
+			
+			.boxshow {
+				display: none;
+				position: absolute;
+				left: 211px;
+				top: 0px;
+			}
+		</style>
+		<script src="jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("li").hover(
+					function() {
+						$(this).find(".boxshow").toggle();
+						$(this).toggleClass("orange");
+					});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="nav-box">
+			<div class="nav-top"><a href="">全部商品分类</a></div>
+			<ul>
+				<li>
+					<a href="">家用电器</a>
+					<div class="boxshow"><img src="images/erji.jpg" /></div>
+				</li>
+				<li>
+					<a href="">手机</a>、<a href="">数码</a>、<a href="">京东通信</a>
+					<div class="boxshow"><img src="images/erji1.jpg" /></div>
+				</li>
+				<li>
+					<a href="">电脑</a>、<a href="">办公</a>
+					<div class="boxshow"><img src="images/erji2.jpg" /></div>
+				</li>
+				<li>
+					<a href="">家居</a>、<a href="">家具</a>、<a href="">家装</a>、<a href="">厨具</a>
+					<div class="boxshow"><img src="images/erji3.jpg" /></div>
+				</li>
+				<li>
+					<a href="">男装</a>、<a href="">女装</a>、<a href="">珠宝</a>
+					<div class="boxshow"><img src="images/erji4.jpg" /></div>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

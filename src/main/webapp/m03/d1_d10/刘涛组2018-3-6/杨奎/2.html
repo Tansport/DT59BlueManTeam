@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+				function student(name,age,js){
+					this.name=name;
+					this.age=age;
+					this.js=js;
+				
+				this.show=function(){
+					var str="姓名："+this.name+"<br/>年龄："+this.age+"<br/> 自我介绍："+this.js;
+					var dd=document.getElementById("mydiv");
+					var p=document.createElement("p");
+					dd.appendChild(p).innerHTML=str;
+//					alert(this.name);
+				}
+				}
+				var st1=new student("王小明",16,"我是高一年级的学生，身高1.8米，很帅，我喜欢学语文和英语");
+				st1.show();
+				var st2=new student("黄妞妞",6,"我今年六岁，非常可爱，马上就可以上小学了，就可能有好多好多的小朋友了");
+				st2.show();
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+	<div id="mydiv"></div>
+	</body>
+</html>

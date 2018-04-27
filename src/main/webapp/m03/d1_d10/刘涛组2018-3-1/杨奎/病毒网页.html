@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+		window.setInterval("abc()",1000);
+	function abc(){
+	 	
+			var a=Math.floor(Math.random()*300);
+			
+			var b=Math.floor(Math.random()*500);
+			window.open("virus.html","",
+			"width=200px height=200px top="+a+" left="+b+"");
+//			
+//		window.setInterval(function(){
+//			
+//		},1000);
+			
+	 }
+		
+			
+		</script>
+	</head>
+	<body onload="abc()">
+		<img src="img/webPic.jpg" width="1260px" height="580px"  />
+	</body>
+</html>

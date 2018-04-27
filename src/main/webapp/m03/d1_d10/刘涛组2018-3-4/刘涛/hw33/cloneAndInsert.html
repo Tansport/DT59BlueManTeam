@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>第四题</title>
+		<style>
+			li{
+				margin-top: 15px;
+				list-style-type: none;
+				font-size: 15px;
+			}
+		</style>
+		<script type="text/javascript">
+			function oc(){
+				var ul=document.getElementById("uc");//获取ul的元素
+				var li=ul.childNodes[1];//获取需要复制的第一个li的内容
+				var ll=li.cloneNode(true);//对第一个节点的复制(包括内容和属性)
+//				ul.appendChild(ll);
+//				alert(li);
+                ul.insertBefore(ll,li);
+
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="uc">
+			<li id="li1">文件路径:<input type="button"  value="选择文件"/>产品经理例会.mmap</li>
+			<li>文件路径:<input type="button"  value="选择文件"/>平台建议.xls</li>
+			<li>文件路径:<input type="file"  value="选择文件"/></li>
+			<li>文件路径:<input type="file"  value="选择文件"/></li>
+		</ul>
+		<input type="button" value="再上传一个文件" onclick="oc()"/>
+		
+	</body>
+</html>

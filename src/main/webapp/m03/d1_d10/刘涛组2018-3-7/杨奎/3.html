@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul,
+			li {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			
+			.adver {
+				margin: 0 auto;
+				width: 700px;
+				overflow: hidden;
+				height: 454px;
+				position: relative;
+				background: url(adver01.jpg);
+			}
+			
+			ul {
+				position: absolute;
+				bottom: 10px;
+				z-index: 100;
+				width: 100%;
+				text-align: center;
+			}
+			
+			ul li {
+				display: inline-block;
+				font-size: 10px;
+				line-height: 20px;
+				font-family: "微软雅黑";
+				margin: 0 1px;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: #333333;
+				text-align: center;
+				color: #ffffff;
+			}
+			
+			.arrowLeft,
+			.arrowRight {
+				position: absolute;
+				width: 30px;
+				background: rgba(0, 0, 0, 0.2);
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				top: 200px;
+				z-index: 150;
+				font-family: "微软雅黑";
+				font-size: 28px;
+				font-weight: bold;
+				cursor: pointer;
+				display: none;
+			}
+			
+			.arrowLeft {
+				left: 10px;
+			}
+			
+			.arrowRight {
+				right: 10px;
+			}
+			
+			li:nth-of-type(1) {
+				background: orange;
+			}
+		</style>
+		
+		<script src="jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				var a = 1;
+				$(".adver").mouseover(function() {
+					$(this).children(".arrowLeft").show();
+					$(this).children(".arrowRight").show();
+				}).mouseout(function() {
+					$(this).children(".arrowLeft").hide();
+					$(this).children(".arrowRight").hide();
+				})
+				$(".arrowRight").click(function() {
+					a++;
+					if (a > 6) {
+						a = 6;
+						alert("已经是最后一张了");
+					} else {
+						$("li:nth-of-type(" + a + ")").css({
+							"background": "orange"
+						});
+						$("li:nth-of-type(" + a + ")").siblings().css({
+							"background": "#333333"
+						});
+						$(".adver").css({
+							"background": "url(adver0" + a + ".jpg"
+						});
+					}
+				})
+				$(".arrowLeft").click(function() {
+					a--;
+					if (a < 1) {
+						a = 1;
+						alert("这是第一张图片了");
+					} else {
+						$("li:nth-of-type(" + a + ")").css({
+							"background": "orange"
+						});
+						$("li:nth-of-type(" + a + ")").siblings().css({
+							"background": "#333333"
+						});
+						$(".adver").css({
+							"background": "url(adver0" + a + ".jpg"
+						});
+					}
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="adver">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+			<div class="arrowLeft">
+				<</div>
+					<div class="arrowRight">></div>
+			</div>
+	</body>
+
+</html>

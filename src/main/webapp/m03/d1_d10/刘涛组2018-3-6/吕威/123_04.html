@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>第四题</title>
+	</head>
+
+	<body id="all">
+		<script type="text/javascript">
+			function Student(name, age) {
+				this.name = name;
+				this.age = age;
+				this.show = "我是高中一年级的学生，身高1.8米，很帅，我喜欢学习语文和英语";
+				this.show1 = "我今年6岁了，非常可爱，马上就可以上小学了，就可能有好多好多的小朋友了。";
+
+				var p = document.createElement("p");
+				var body = document.getElementById("all");
+
+				this.show2 = function() {
+					return body.appendChild(p).innerHTML = this.name + "<br/>" + this.age + "<br/>" + this.show;
+				}
+				this.show3 = function() {
+					return body.appendChild(p).innerHTML = this.name + "<br/>" + this.age + "<br/>" + this.show1;
+				}
+			}
+			var stu1 = new Student("王小明", 16);
+			stu1.show2();
+			var stu2 = new Student("黄妞妞", 6)
+			stu2.show3();
+		</script>
+	</body>
+
+</html>

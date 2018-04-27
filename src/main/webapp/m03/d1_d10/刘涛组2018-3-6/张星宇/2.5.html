@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function() {
+				function Animal(color, name, age) {
+					this.color = color;
+					this.name = name;
+					this.age = age;
+				}
+
+				function Poultry(color, name, age, leg) {
+					Animal.call(this,name,age,color);
+					this.leg = leg;
+				}
+				Poultry.prototype.inro = function() {
+					var str = "我是一个" + this.color + "的" + this.name + "," + "我已经" + this.age + "岁了，我有" + this.leg + "条腿";
+					var body = document.getElementById("bd");
+					var p = document.createElement("p");
+					p.innerHTML = str;
+					body.appendChild(p);
+					return p;
+				}
+				var s1 = new Poultry("1","灰色","小狗狗","4");
+				s1.inro();
+				var s2=new Poultry("2","白色","茶杯猫","4");
+				s2.inro();
+				var s3=new Poultry("1","红色","母鸡","2");
+				s3.inro();
+			}
+		</script>
+	</head>
+
+	<body id="bd">
+	</body>
+
+</html>

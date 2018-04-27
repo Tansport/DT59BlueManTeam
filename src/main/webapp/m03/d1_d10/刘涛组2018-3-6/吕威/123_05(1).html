@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>第五题</title>
+	</head>
+
+	<body id="all">
+		<script type="text/javascript">
+			function Animal(name, age, color) {
+				this.name = name;
+				this.age = age;
+				this.color = color;
+			}
+
+			function poultry(name, age, color, leg) {
+				Animal.call(this, name, age, color);
+				this.leg = leg;
+
+			}
+
+			poultry.prototype.info = function() {
+				var p = document.createElement("p");
+				var body = document.getElementById("all");
+				return body.appendChild(p).innerHTML = "我是一个" + this.color + "的" + this.name + ",我已经" + this.age + "岁了，我是" + this.leg + "条腿";
+			}
+			var a1 = new poultry("小狗狗", 1, "灰色", 4);
+			a1.info();
+			var a2 = new poultry("茶杯猫", 2, "白色", 4);
+			a2.info();
+			var a3 = new poultry("母鸡", 1, "红色", 2);
+			a3.info();
+		</script>
+	</body>
+
+</html>

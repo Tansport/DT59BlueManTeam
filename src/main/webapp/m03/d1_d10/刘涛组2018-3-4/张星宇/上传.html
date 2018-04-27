@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul {
+				list-style: none;
+			}
+			
+			li {
+				margin: 10px;
+			}
+			
+			p {
+				padding-left: 50px;
+			}
+		</style>
+		<script>
+			function abc() {
+				var uu = document.getElementById("uu");
+				var li = uu.firstElementChild;
+				var txt =li.cloneNode(true);
+				uu.appendChild(txt)
+			}
+		</script>
+	</head>
+
+	<body>
+		<ul id="uu">
+			<li>文件路径：<input type="file" value="选择文件" /></li>
+			<li></li>
+		</ul>
+		<input type="button" value="再上传一个文件" onclick="abc()" />
+	</body>
+
+</html>

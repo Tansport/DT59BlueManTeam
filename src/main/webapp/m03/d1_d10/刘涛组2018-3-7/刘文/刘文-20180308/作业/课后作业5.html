@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			h1 {
+				/*height: 50px;*/
+				text-align: center;
+				background-color: greenyellow;
+			}
+			
+			p {
+				font-family: "微软雅黑";
+				font-size: 20px;
+				font-weight: bolder;
+				/*line-height: 5px;*/
+				display: none;
+			}
+		</style>
+		<script src="jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#h1").click(function() {
+					////					alert("草草草");
+					//					$("p1").css({
+					//						"display": "block";
+					//					});
+					//					$("#p1").show(1000);
+					$("#p1").toggle(1000);
+					//				$("#p1").hide(1000);
+				});
+				$("#h2").click(function() {
+					//					$("#p2").show(1000);
+					$("#p2").toggle(1000);
+					//					$("#p2").hide(1000);
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<h1 id="h1">林徽因简介</h1>
+		<p id="p1">
+			林徽因，女，汉族，原名林徽音，出生于浙江杭州，祖籍福建福州。中国著名建筑家、诗人、作家。人民英雄纪念碑和中华人民共和国国徽深化方案的设计者 林徽因是建筑师梁思成的第一任妻子。三十年代初，与夫婿梁思成用现代科学方法研究方法研究中国古代建筑，成为这个学术领域的开拓者。
+		</p>
+		<h1 id="h2">主要作品</h1>
+		<p id="p2">
+			《你是人间四月天》 <br /> 《宝莲灯》 <br /> 《九十九度中》
+		</p>
+	</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>例4</title>
+		<style type="text/css">
+			* {
+				margin: 0px;
+			}
+			
+			.contain {
+				border: 1px red solid;
+				width: 400px;
+				height: 365px;
+			}
+			
+			h2 {
+				display: block;
+				/*width: 100px;*/
+				/*border: 1px red solid;*/
+				padding-left: 20px;
+				line-height: 60px;
+				/*position: relative;
+				left: 10px;*/
+			}
+			
+			ul {
+				/*border: 1px red solid;*/
+				display: block;
+				width: 400px;
+				/*float: left;*/
+				padding-left: 0px;
+			}
+			
+			ul>li {
+				list-style: none;
+				display: block;
+				/*border: 1px red solid;*/
+				border-bottom: 1px #262323 dashed;
+				padding-left: 20px;
+				line-height: 50px;
+				font-size: 14px;
+			}
+		</style>
+		<script src="jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("h2").css({
+					"background": "#2a65ba",
+					"color": "#ffffff"
+				});
+				$("li:last-of-type").css("border", "none");
+				$("li:first-of-type").css({
+					"font-size": "16px",
+					"color": "#e90202"
+				});
+				$("li :even").css("background", "#f0f0f0");
+				$("li:odd").css("background", "#cccccc");
+				$("li:lt(2)").css("color", "#708b02");
+				$("li:gt(3)").css("color", "#b66302");
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="contain">
+			<h2>祝福冬奥</h2>
+			<ul>
+				<li>贝克汉姆：衷心希望北京能够申办成功！</li>
+				<li>要命：北京申冬奥是个非常棒的机会！</li>
+				<li>张虹：北京办冬奥，大家的热情定超乎想象！</li>
+				<li>肖恩怀特：我爱北京，支持北京申办冬奥会！</li>
+				<li>赵宏博：北京申办冬奥会是再适合不过了！</li>
+				<li>你喜欢哪些冬季运动项目？（点击进去调查页）</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

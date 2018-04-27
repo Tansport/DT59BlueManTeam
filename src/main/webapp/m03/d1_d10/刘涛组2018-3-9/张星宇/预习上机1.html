@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				font-size: 12px;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			#nav {
+				width: 100px;
+				margin: 0 auto;
+			}
+			
+			#nav li {
+				height: 36px;
+			}
+			
+			#nav li span {
+				display: block;
+				float: right;
+				width: 35px;
+				height: 35px;
+				border-bottom-left-radius: 5px;
+				border-top-left-radius: 5px;
+				background: #7a6e6e url(toolbars.png) no-repeat;
+			}
+			
+			#nav li:nth-of-type(1) span {
+				background-position: 0px -15px;
+			}
+			
+			#nav li:nth-of-type(2) span {
+				background-position: 0px -57px;
+			}
+			
+			#nav li:nth-of-type(3) span {
+				background-position: 1px -106px;
+			}
+			
+			#nav li:nth-of-type(4) span {
+				background-position: 0px -156px;
+			}
+			
+			#nav li:nth-of-type(5) span {
+				background-position: 0px -200px;
+			}
+			
+			#nav li:nth-of-type(6) span {
+				background-position: 2px -265px;
+			}
+			
+			#nav li p {
+				height: 35px;
+				text-align: left;
+				background: #c81623;
+				color: #ffffff;
+				border-bottom-left-radius: 5px;
+				border-top-left-radius: 5px;
+				line-height: 35px;
+				padding-left: 10px;
+				display: none;
+			}
+		</style>
+		<script src="jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("span").mouseover(function() {
+					var index = $("#nav li span").index(this);
+					$("#nav li:eq(" + index + ") span~p").show();
+					$("span:eq(" + index + ")").css("background-color","#c81623");
+				});
+				$("span").mouseout(function() {
+					var index = $("#nav li span").index(this);
+					$("#nav li:eq(" + index + ") span~p").hide();
+					$("span:eq(" + index + ")").css("background-color","#7a6e6e");
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<nav id="nav">
+			<li><span></span>
+				<p>就东会员</p>
+			</li>
+			<li><span></span>
+				<p>购物车</p>
+			</li>
+			<li><span></span>
+				<p>我的关注</p>
+			</li>
+			<li><span></span>
+				<p>我的足迹</p>
+			</li>
+			<li><span></span>
+				<p>我的消息</p>
+			</li>
+			<li><span></span>
+				<p>咨询JIMI</p>
+			</li>
+
+		</nav>
+	</body>
+
+</html>
