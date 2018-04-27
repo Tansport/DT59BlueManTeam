@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function abc() {
+				var a = 5;
+				for(var i = 0; i < a; i++) { // i 表示当前在第几行
+					var k = a - i - 1;
+					for(var j = 0; j < a; j++) { // j 表示* 在第几列
+						if(j < k) {
+							document.write("&nbsp;");
+						} else if(j == k) {
+							document.write("*");
+						} else {
+							document.write("&nbsp;");
+						}
+						if(j == 4) {
+							for(var j1 = 4; j1 > 0; j1--) {
+								if(j1 < k + 1) {
+									document.write("&nbsp;");
+								} else {
+									if(j1 == k + 1) {
+										document.write("*");
+									}
+									document.write("&nbsp;");
+								}
+							}
+						}
+					}
+
+					document.writeln("<br />");
+				}
+				for (var i = 0; i < a; i++) {
+					var k = a - i - 1;
+					for (var j = 4; j > 0; j--) {
+						if (j < k - 1) {
+							document.write("&nbsp;");
+						} else if (j == k - 1) {
+							document.write("*");
+						} else {
+							document.write("&nbsp;");
+						}
+						if (j == 1) {
+							for (var j1 = 0; j1 < 4; j1++) {
+								if (j1 < k - 1) {
+									document.write("&nbsp;");
+								} else if (j == k - 1) {
+									document.write("*");
+								} else {
+									document.write("&nbsp;");
+								}
+								if (j == 1) {
+									for (var j1 = 0; j1 < 4; j1++) {
+										if (j1 < k - 1) {
+											document.write("&nbsp;");
+										} else if (j1 == k - 1) {
+											document.write("*");
+										} else {
+											document.write("&nbsp;");
+										}
+									}
+								}
+							}
+							document.writeln("<br />");
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="测试" onClick="abc();" />
+	</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>镂空菱形</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			div {
+				width: 10px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			for (var i = 0; i < 6; i++) {
+				for (var k = 6; k >= i; k--) {
+					document.writeln("<div></div>")
+				}
+				for (var j = 0; j < 2 * i + 1; j++) {
+					if (j == 0 || j == 2 * i) {
+						document.writeln("<div>*</div>");
+					} else {
+						document.writeln("<div></div>");
+					}
+				}
+				document.writeln("<br/>");
+			}
+			var h = 6 + 1;
+			for (; h > 0; h--) {
+				for (var m = 7; m >= h; m--) {
+					document.writeln("<div></div>");
+				}
+				for (var n = 0; n < 2 * h - 1; n++) {
+					if (n == 0 || n == 2 * h - 2) {
+						document.writeln("<div>*</div>");
+					} else {
+						document.writeln("<div></div>")
+					}
+				}
+				document.writeln("<br/>");
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		#mydiv{
+				width: 960px;
+				margin: 200px auto;
+				position: relative;
+			}
+			#mydiv img{
+				border:1px #ddd solid ;
+				padding: 10px;
+				position: absolute;
+				background: #FFF;
+				z-index: 1;
+				transition:all 2s  linear;
+			}
+			#mydiv img:nth-child(1){
+				top: -220px;
+				left: -60px;
+				transform: rotate(-23deg);
+			}
+			#mydiv img:nth-child(2){
+				bottom: -10px;
+				right: 560px;
+				transform: rotate(25deg);
+			}
+			#mydiv img:nth-child(3){
+				top: -160px;
+				left:350px;
+				transform: rotate(-15deg);
+				z-index: -1;
+			}
+			
+			#mydiv img:nth-child(4){
+				top: -200px;
+				left: 650px;
+				transform: rotate(10deg);
+				z-index: -2;
+			}
+			#mydiv img:nth-child(5){
+				top: 20px;
+				left: -80px;
+				transform: rotate(20deg);
+			}
+			#mydiv img:nth-child(6){
+				top: 50px;
+				left: 130px;
+				transform: rotate(-15deg);
+			}
+			#mydiv img:nth-child(7){
+				top: 20px;
+				left: 280px;
+				transform: rotate(-20deg);
+				z-index: -2;
+			}
+			#mydiv img:nth-child(8){
+				top: -20px;
+				left: 570px;
+				transform: rotate(-20deg);
+				z-index: -3;
+			}
+			#mydiv img:nth-child(9){
+				top: 0px;
+				left: 710px;
+				transform: rotate(20deg);
+			}
+			#mydiv img:nth-child(10){
+				top: 120px;
+				left: 550px;
+				transform: rotate(15deg);
+			}
+			#mydiv img:hover{
+				z-index: 2;
+				box-shadow: 5px 5px 5px #DDD;
+				transform: rotate(0deg) scale(1.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mydiv">
+			<img src="js/img/5.jpg" width="270px" height="200px"/>
+			<img src="js/img/8.jpg" width="230px" height="150px"/>
+			<img src="js/img/4.jpg" width="250px" height="165px"/>
+			<img src="js/img/3.jpg" width="270px" height="190px"/>
+			<img src="js/img/6.jpg" width="250px" height="150px"/>
+			<img src="js/img/1.jpg" width="200px" height="160px"/>
+			<img src="js/img/10.jpg" width="300px" height="210px"/>
+			<img src="js/img/2.jpg" width="250px" height="150px"/>
+			<img src="js/img/7.jpg" width="270px" height="190px"/>
+			<img src="js/img/9.jpg" width="300px" height="190px"/>
+		</div>
+	</body>
+</html>

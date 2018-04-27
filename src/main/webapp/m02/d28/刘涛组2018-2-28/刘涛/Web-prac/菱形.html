@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>菱形</title>
+		<script>
+			function abc(){
+				var a=7;
+				for(var i=0;i<a;i++){
+					for(var j=0;j<a-Math.abs(i-3);j++){
+						if(j<Math.abs(3-i)){
+							document.write("&nbsp;")
+						}else{
+							if(j==Math.abs(3-i)||j==6-Math.abs(3-i)){
+								document.write("*")
+							}else{
+								document.write("&nbsp;")
+							}
+							
+						}	
+						}
+						 document.write("<br />")
+					}
+					   
+				}
+				
+		</script>
+	</head>
+	<body>
+		<input type="button" value="菱形" onclick="abc()"/>
+	</body>
+</html>

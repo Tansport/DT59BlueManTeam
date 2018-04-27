@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>菱形</title>
+		<script type="text/javascript">
+			function abc() {
+				var a = 5;
+				for(var i = 1; i <= a; i++) {
+					for(var j = 1; j <= a - i; j++) {
+						document.write("&nbsp;");
+					}
+					for(var k = 1; k <= 2 * i - 1; k++) {
+						if(k == 1 || k == 2 * i - 1) {
+							document.write("*");
+						} else {
+							document.write("&nbsp");
+						}
+					}
+					document.writeln("<br />");
+				}
+				var b = 4;
+				for(var i = b; i >= 1; i--) {
+					for(var j = 1; j <= a - i; j++) {
+						document.write("&nbsp;");
+					}
+					for(var k = 1; k <= 2 * i - 1; k++) {
+						if(k == 1 || k == 2 * i - 1) {
+							document.write("*");
+						} else {
+							document.write("&nbsp;");
+						}
+					}
+					document.writeln("<br />");
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type="button" id="test" value="test" onclick="abc()" />
+	</body>
+
+</html>

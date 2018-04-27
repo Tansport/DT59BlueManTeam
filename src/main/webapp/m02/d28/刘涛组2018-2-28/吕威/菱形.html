@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>镂空菱形</title>
+		<script type="text/javascript">
+			function abc() {
+				var c = 5;
+				for(var i = 0; i < c; i++) { // i 表示当前在第几行
+					var r = c - i - 1;
+					for(var j = 0; j < c; j++) { // j 表示* 在第几列
+						if(j < r) {
+							document.write("&nbsp;");
+						} else if(j == r) {
+							document.write("*");
+						} else {
+							document.write("&nbsp;");
+						}
+						if(j == 4) {
+							for(var j1 = 4; j1 > 0; j1--) {
+								if(j1 < r + 1) {
+									document.write("&nbsp;");
+								} else {
+									if(j1 == r + 1) {
+										document.write("*");
+									}
+									document.write("&nbsp;");
+								}
+							}
+						}
+					}
+					document.writeln("<br />"); // 一个循环后就换一行
+
+				}
+				for(var i = 0; i < c; i++) { // i 表示当前在第几行
+					var r = c - i - 1;
+					for(var j = 4; j > 0; j--) {
+						if(j < r - 1) {
+							document.write("&nbsp;");
+						} else if(j == r - 1) {
+							document.write("*");
+						} else {
+							document.write("&nbsp;");
+						}
+						if(j == 1) {
+							for(var j1 = 0; j1 < 4; j1++) {
+								if(j1 < r - 1) {
+									document.write("&nbsp;");
+								} else if(j1 == r - 1) {
+									document.write("*");
+								} else {
+									document.write("&nbsp;");
+								}
+							}
+						}
+					}
+					document.writeln("<br />"); // 一个循环后就换一行
+				}
+			}
+		</script>
+	</head>
+	<input type="button" name="" id="" value="测试" onclick="abc()" />
+
+	<body>
+	</body>
+
+</html>
