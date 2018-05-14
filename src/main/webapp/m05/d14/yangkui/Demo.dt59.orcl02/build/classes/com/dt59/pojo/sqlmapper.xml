@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sqlmapper">
+	<!-- parameterType:参数类型   int:内建类型  resultType:结果类型  orm -->
+	<select id="getStu" resultType="com.dt59.pojo.Stu">
+		select * from stu
+	</select>
+	
+	<select id="getAllStu" resultType="java.util.HashMap">
+		select a.sid,a.sname,a.sage,b.gname from stu a,grade b where a.sgid=b.sgid 
+	</select>
+	
+	<select id="getAllStuByLike" parameterType="string"  resultType="java.util.HashMap">
+		select count(1) 数量
+  		from stu a, grade b
+ 		where a.sgid = b.sgid
+         group by b.gname
+         having  b.gname like '%${value}%'
+	</select>
+	
+	<insert id="addStu" parameterType="string"  >
+	
+	insert into stu values(#{sid},'#{sname}',#{sage},'#{scard}',#{sgid})
+	
+	</insert>
+</mapper>
