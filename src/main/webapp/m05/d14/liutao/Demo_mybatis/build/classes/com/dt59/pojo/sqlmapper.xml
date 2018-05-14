@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sqlmapper">
+	<!-- parameterType:参数类型   int:内建类型  resultType:结果类型  orm -->
+	<select id="getAllinfo" resultType="com.dt59.pojo.Stu">
+		select * from stu
+	</select>
+	<select id="getStu"  parameterType="int" resultType="com.dt59.pojo.Stu">
+		select * from stu where sid=#{id}
+	</select>
+	<select id="getStuMap"  parameterType="java.util.HashMap" resultType="com.dt59.pojo.Stu">
+		select * from stu where sid=#{id} and sname=#{name}
+	</select>
+	<select id="getStuByEntity" parameterType="com.dt59.pojo.Stu" resultType="com.dt59.pojo.Stu">
+		select * from stu where sid=#{sid} and sname=#{sname}
+	</select>
+	<select id="getAll" resultType="java.util.HashMap">
+		select a.sid,a.sname,a.scard,b.gname from stu a,grade b where a.sgid=b.sgid
+	</select>
+	<select id="getLike" resultType="java.util.HashMap">
+		select temp.gname,count(1) from (select * from stu a,grade b  where a.sgid=b.sgid) temp group by temp.gname
+	</select>
+	<select id="getInsert" parameterType="com.dt59.pojo.Stu">
+		insert into stu values(#{id},#{name},#{age},#{card},#{gid});
+	</select>
+	<select id="getLikeNum" parameterType="string" resultType="java.util.HashMap">
+		select temp.gname,count(1) from (
+		select * from stu a,grade b  where a.sgid=b.sgid
+		) temp  
+		where temp.gname like '%${value}%' group by temp.gname
+	</select>
+</mapper>
