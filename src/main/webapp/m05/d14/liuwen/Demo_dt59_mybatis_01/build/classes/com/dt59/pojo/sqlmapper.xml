@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sqlmapper">
+	<!-- parameterType:参数类型   int:内建类型  resultType:结果类型  orm -->
+	<select id="getStu" resultType="com.dt59.pojo.Stu">
+		select * from stu
+	</select>
+	<select id="getAllStu" resultType="java.util.HashMap">
+		select s.sid,s.sname,s.sage,g.gname from stu s,grade g  where s.sgid = g.sgid
+	</select>
+	<select id="getStuById" parameterType="int" resultType="com.dt59.pojo.Stu">
+		select * from stu where sid=#{id}
+	</select>
+</mapper>
