@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sqlmappper">
+	<!--parameterType ：参数类型 int :内建类型 resultType:结果类型 -->
+	<select id="getStu" resultType="com.dt59.pojo.Stu">
+		select * from info
+	</select>
+	<select id="getStuId" parameterType="int" resultType="com.dt59.pojo.Stu">
+		select *
+		from info where id=#{id}
+	</select>
+	<select id="getStubyMap" parameterType="java.util.HashMap"
+		resultType="com.dt59.pojo.Stu">
+		select * from info where id=#{id} and name=#{name}
+	</select>
+	<select id="getStuEntity" parameterType="com.dt59.pojo.Stu"
+		resultType="com.dt59.pojo.Stu">
+		select * from info where id=#{id} and name=#{name}
+	</select>
+	<select id="getAllStu" resultType="java.util.HashMap">
+		select t.name,t.id,s.aname
+		from info t,stu4 s where t.id=s.id
+	</select>
+	<select id="getAllStulike" parameterType="String" resultType="java.util.HashMap">
+		select
+		t.id,t.name,s.aname from info t,stu4 s where t.id=s.id and
+		t.name like
+		'%${value}%'
+	</select>
+	<select id="getAllStulike2" parameterType="String" resultType="java.util.HashMap">
+		select
+		t.id,t.name,s.aname from info t,stu4 s where t.id=s.id and
+		t.name like
+		concat('%',#{name})
+	</select>
+</mapper>

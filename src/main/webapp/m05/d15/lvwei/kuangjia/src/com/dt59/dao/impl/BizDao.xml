@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dt59.dao.BizDao">
+	<!-- parameterType:参数类型 int:内建类型 resultType:结果类型 orm -->
+	<select id="getnuminfo" resultType="java.util.HashMap">
+		select s.aname, count(*)
+		from
+		info t,stu4 s where t.id=s.id
+		group by s.aname
+	</select>
+	<insert id="addinfo" parameterType="stu">
+		insert into info
+		values(emp_sequence.nextval,#{name})
+	</insert>
+
+	<delete id="delInfoById" parameterType="int">
+		delete from info where
+		id=#{id}
+	</delete>
+
+	<resultMap id="rmap" type="stu">
+		<!-- 主键：id property:类中的属性 column:数据表中字段 -->
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<association property="stu4" javaType="stufour">
+			<id property="id" column="id" />
+			<result property="aname" column="aname" />
+		</association>
+	</resultMap>
+	<!-- resultMap:描述如何将结果集映射到Java对象 -->
+	<select id="getAllinfo" resultMap="rmap">
+		select
+		t.id,t.name,s.aname from
+		info t,stu4 s where t.id=s.id
+	</select>
+
+	<resultMap id="rmap2" type="stufour">
+		<id property="id" column="id" />
+		<result property="aname" column="aname" />
+		<!-- ofType:类型 找的类型：entity -->
+		<collection property="stuu" ofType="stu">
+			<id property="id" column="id" />
+			<result property="name" column="name" />
+
+		</collection>
+	</resultMap>
+	<select id="getAllStu4" resultMap="rmap2">
+		select
+		t.id,t.name,s.aname from
+		info t,stu4 s where t.id=s.id
+	</select>
+</mapper>
