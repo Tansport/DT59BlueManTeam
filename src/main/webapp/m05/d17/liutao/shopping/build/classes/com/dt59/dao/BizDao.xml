@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dt59.dao.BizDao">
+	<!--parameterType ：参数类型 int :内建类型 resultType:结果类型 -->
+	<select id="validateUser" resultType="user">
+		select *
+		from SMBMS_USER
+		where usercode=#{userCode} and
+		userpassword=#{userPassword}
+	</select>
+
+	<resultMap id="rmap" type="bill">
+		<!-- 主键：id property:类中的属性 column:数据表中字段 -->
+		<id property="id" column="id" />
+		<result property="billCode" column="billCode" />
+		<result property="productName" column="productName" />
+		<result property="totalPrice" column="totalPrice" />
+		<result property="isPayment" column="isPayment" />
+		<result property="creationDate" column="creationDate" />
+		<association property="provider" javaType="provider">
+			<id property="id" column="id" />
+			<result property="proName" column="proName" />
+		</association>
+	</resultMap>
+	<!-- resultMap:描述如何将结果集映射到Java对象 -->
+	<select id="getAllBill" resultMap="rmap">
+		SELECT
+		a.billCode,
+		a.productName,
+		b.proName,
+		a.totalPrice,
+		a.isPayment,
+		a.creationDate
+		FROM
+		smbms_bill a
+		INNER JOIN smbms_provider b
+		ON a.providerId = b.id
+	</select>
+	<select id="getProviderByTinc" resultType="string">
+		select distinct
+		a.proname from smbms_provider a
+	</select>
+	<select id="getSmbmsBillIspay" resultType="string">
+
+		select distinct ispayment from smbms_bill
+	</select>
+
+</mapper>
