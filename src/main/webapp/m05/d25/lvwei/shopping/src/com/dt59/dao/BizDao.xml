@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dt59.dao.BizDao">
+	<cache eviction="FIFO" flushInterval="60000" size="512" readOnly="true" />
+	<!--parameterType ：参数类型 int :内建类型 resultType:结果类型 -->
+	<select id="validateUser" parameterType="user" resultType="user"
+		useCache="true">
+		select *
+		from SMBMS_USER
+		where usercode=#{userCode} and
+		userpassword=#{userPassword}
+	</select>
+
+	<resultMap id="rmap" type="bill">
+		<!-- 主键：id property:类中的属性 column:数据表中字段 -->
+		<id property="id" column="id" />
+		<result property="billCode" column="billCode" />
+		<result property="productName" column="productName" />
+		<result property="totalPrice" column="totalPrice" />
+		<result property="isPayment" column="isPayment" />
+		<result property="creationDate" column="creationDate" />
+		<association property="provider" javaType="provider">
+			<id property="id" column="id" />
+			<result property="proName" column="proName" />
+		</association>
+	</resultMap>
+
+	<!-- 分页查询 -->
+	<select id="getAllBillByPage" parameterType="page" resultMap="rmap">
+		select * from (
+		SELECT
+		a.id,
+		a.billCode,
+		a.productName,
+		b.proName,
+		a.totalPrice,
+		a.isPayment,
+		a.creationDate,
+		rownum rn
+		FROM
+		smbms_bill a
+		INNER JOIN smbms_provider b ON a.providerId = b.id
+		where
+		rownum&lt;=(#{pagesize}*#{currentpage})) t where
+		t.rn&gt;(#{currentpage}-1)*(#{pagesize})
+	</select>
+
+
+	<!-- resultMap:描述如何将结果集映射到Java对象 -->
+	<select id="getAllBill" resultMap="rmap" useCache="true">
+		SELECT
+		a.billCode,
+		a.productName,
+		b.proName,
+		a.totalPrice,
+		a.isPayment,
+		a.creationDate
+		FROM
+		smbms_bill a
+		INNER JOIN smbms_provider b
+		ON
+		a.providerId = b.id
+	</select>
+	<select id="getProviderByTinc" resultType="string">
+		select distinct
+		a.proname from smbms_provider a
+	</select>
+	<select id="getSmbmsBillIspay" resultType="string">
+
+		select distinct
+		ispayment from smbms_bill
+	</select>
+
+	<delete id="delBillCode" parameterType="string">
+		delete from smbms_bill
+		where billcode=#{code}
+	</delete>
+
+	<select id="getAllBillByTj" parameterType="java.util.HashMap"
+		resultMap="rmap">
+		SELECT
+		a.billCode,
+		a.productName,
+		b.proName,
+		a.totalPrice,
+		a.isPayment,
+		a.creationDate
+		FROM
+		smbms_bill a
+		INNER JOIN smbms_provider b ON
+		a.providerId = b.id
+		<trim prefix="WHERE" prefixOverrides="AND |OR ">
+			<if test="qname != null">
+				a.productName like #{qname}
+			</if>
+			<if test="qid != null">
+				and b.proName=#{qid}
+			</if>
+			<if test="qispay != null">
+				and a.isPayment=#{qispay}
+			</if>
+		</trim>
+	</select>
+
+	<!-- 查询数据表的条数 -->
+	<select id="getAllBillCount" resultType="int">
+		SELECT
+		count(1)
+		FROM
+		smbms_bill a
+		INNER JOIN smbms_provider b ON a.providerId = b.id
+	</select>
+
+	<select id="getBillById" parameterType="int" resultType="bill">
+		select *
+		from smbms_bill where id=#{id}
+	</select>
+
+	<update id="updateBillById" parameterType="bill">
+		update smbms_bill
+		<set>
+			<if test="productName != null">
+				productname=#{productName},
+			</if>
+			<if test="productUnit != null">
+				productunit=#{productUnit},
+			</if>
+			<if test="productCount != null">
+				productcount=#{productCount},
+			</if>
+			<if test="totalPrice != null">
+				totalprice=#{totalPrice},
+			</if>
+		</set>
+		<where>
+			id=#{id}
+		</where>
+	</update>
+
+	<!-- <update id="updateBillById" parameterType="sbill"> update smbms_bill 
+		trim代替set 前缀 suffixOverrides（后缀重写） <trim prefix="set" suffixOverrides="," 
+		suffix="where id = #{id}"> <if test="productname != null"> productname=#{productname}, 
+		</if> <if test="productunit != null"> productunit=#{productunit}, </if> <if 
+		test="productcount != null"> productcount=#{productcount}, </if> <if test="totalprice 
+		!= null"> totalprice=#{totalprice} </if> </trim> </update> -->
+
+	<resultMap id="rmap2" type="user">
+		<id property="id" column="id" />
+		<result property="userCode" column="usercode"></result>
+		<result property="userName" column="username"></result>
+		<result property="gender" column="gender"></result>
+		<!-- column:age 数据表中没有这个字段 select:虚拟数据表 可以映射 -->
+		<result property="age" column="age"></result>
+		<result property="phone" column="phone"></result>
+		<!-- 配置多对一的时候，javaType 一对多的时候，ofType 包含或映射类型 -->
+		<association property="role" javaType="role">
+			<id property="id" column="id" />
+			<result property="roleName" column="rolename"></result>
+		</association>
+	</resultMap>
+	<select id="getAllUser" resultMap="rmap2">
+		select a.id,
+		a.usercode,
+		a.username,
+		a.gender,
+		floor(months_between(sysdate, a.birthday) / 12) as
+		age,
+		a.phone,
+		b.rolename
+		from smbms_user a
+		inner join smbms_role b on
+		a.userrole = b.id
+	</select>
+
+
+
+</mapper>

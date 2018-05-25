@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="database.properties" />
+	<settings>
+		<!-- 配置缓存 延迟加载 -->
+		<setting name="cacheEnabled" value="true" />
+	</settings>
+	<typeAliases>
+		<!-- 给Stu类起一个别名 -->
+		<typeAlias alias="user" type="com.dt59.pojo.User" />
+		<typeAlias alias="bill" type="com.dt59.pojo.Bill" />
+		<typeAlias alias="provider" type="com.dt59.pojo.Provider" />
+		<typeAlias alias="page" type="com.dt59.pojo.Page"></typeAlias>
+		<typeAlias alias="role" type="com.dt59.pojo.Role" />
+
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/dt59/dao/BizDao.xml" />
+	</mappers>
+</configuration>
